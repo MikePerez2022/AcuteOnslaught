@@ -1,11 +1,16 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEditor;
-
-// Texture2D StartScreen;
+using UnityEngine.UI;
 
 public class NavUI : MonoBehaviour
 {
+    [Header("UI Screens:")]
+    [SerializeField] GameObject StartScreen;
+    [SerializeField] GameObject GameScreen;
+    [SerializeField] GameObject DeathScreen;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,13 +25,18 @@ public class NavUI : MonoBehaviour
 
     public void OnStartBtnPressed()
     {
-
+        StartScreen.SetActive(false);
+        GameScreen.SetActive(true);
         print("Start Btn worked");
     }
 
     public void OnQuitBtnPressed()
     {
-        Application.Quit();
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
         print("Quit Btn worked");
     }
 }
