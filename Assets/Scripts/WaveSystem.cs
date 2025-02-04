@@ -17,7 +17,8 @@ public class WaveSystem : MonoBehaviour
     }
     void CreateWave()
     {
-        
+        // Notify Wave Started
+        SelectWaveEnemies();
     }
     void SelectWaveEnemies()
     {
