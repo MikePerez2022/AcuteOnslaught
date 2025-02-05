@@ -7,30 +7,18 @@ public class PlayerMovementController : MonoBehaviour
 
     [SerializeField] private float moveSpeed;
     private Vector2 moveDir;
-    private Vector2 aimDir;
 
-    private bool shooting;
+    private int touchIndex = -1;
 
-    private Vector2 RightTouchStartPos;
-    private Vector2 RightTouchCurrentPos;
     private Vector2 LeftTouchStartPos;
     private float leftTouchDist;
     [SerializeField] private float leftMaxDragDist;
 
 
-    private bool[] touchOnRight = new bool[2];
-    //private PlayerInput input;
-    //private InputAction T0PositionAction;
-    //private InputAction T1PositionAction;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        //input = GetComponent<PlayerInput>();
-        //T0PositionAction = input.actions["Touch 0"];
-        //T1PositionAction = input.actions["Touch 1"];
-
-
+        touchIndex = -1;
     }
 
     private void Update()
@@ -40,42 +28,20 @@ public class PlayerMovementController : MonoBehaviour
         {
             if (index <= 1)
             { 
-                if (touch.phase == TouchPhase.Began)
+                if (touch.phase == TouchPhase.Began && touch.position.x <= Screen.width / 2)
                 {
-                    if (touch.position.x <= Screen.width / 2)
-                    {
-                        LeftTouchStartPos = touch.position;
-                        touchOnRight[index] = false;
-                    }
-                    else
-                    {
-                        RightTouchStartPos = touch.position;
-                        touchOnRight[index] = true;
-                        shooting = true;
-                    }
+                    touchIndex = index;
+                    LeftTouchStartPos = touch.position;
                 }
-                else if (touch.phase == TouchPhase.Moved)
+                else if (touch.phase == TouchPhase.Moved && index == touchIndex)
                 {
-                    if (touchOnRight[index] == false)
-                    {
-                        moveDir = (touch.position - LeftTouchStartPos).normalized;
-                        leftTouchDist = Vector2.Distance(LeftTouchStartPos, touch.position);
-                    }
-                    else
-                    {
-                        aimDir = (touch.position - RightTouchStartPos).normalized;
-                    }
+                    moveDir = (touch.position - LeftTouchStartPos).normalized;
+                    leftTouchDist = Vector2.Distance(LeftTouchStartPos, touch.position);
                 }
-                else if (touch.phase == TouchPhase.Ended)
+                else if (touch.phase == TouchPhase.Ended && index == touchIndex)
                 {
-                    if (touchOnRight[index] == false)
-                    {
-                        moveDir = Vector2.zero;
-                    }
-                    else
-                    {
-                        shooting = false;
-                    }
+                    touchIndex = -1;
+                    moveDir = Vector2.zero;
                 }
             }
             index++;
