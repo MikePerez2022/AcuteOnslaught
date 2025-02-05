@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 42104f90633444341bbcb9a551eeafa9, type: 3}
   <poolType>k__BackingField: 0
-  <FireRate>k__BackingField: 0.02
-  <Offset>k__BackingField: {x: 0, y: 0.5}
+  <FireRate>k__BackingField: 2
+  <SpreadAngle>k__BackingField: 25
+  <SpreadAmount>k__BackingField: 5
+  <BurstAmount>k__BackingField: 5
+  <BurstSpeed>k__BackingField: 0.2

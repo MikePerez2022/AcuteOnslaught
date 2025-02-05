@@ -37,21 +37,48 @@ public class ShootingManager : MonoBehaviour
 
     public IEnumerator SpawnBullet(Weapon weapon, int index)
     {
+        int burstCount = 0;
+        float currentAngle = 0;
+        float anglePerBullet = 0;
         firingGuns[index] = true;
 
-        Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y);
-
-        GameObject spawned = pm.GetPooledObject(weapon.poolType, weapon.Bullet, spawnPos, transform.rotation);
-        Bullet bullet = spawned.GetComponent<Bullet>();
-
-        if (bullet.usedPreviously)
+        if (weapon.SpreadAngle > 1)
         {
-            spawned.transform.SetLocalPositionAndRotation(spawnPos, transform.rotation);
+            anglePerBullet = weapon.SpreadAngle / (weapon.SpreadAmount - 1);
         }
 
-        bullet.SetInUse();
+        while (true)
+        {
+            currentAngle = weapon.SpreadAngle * .5f;
 
-        yield return new WaitForSeconds(weapon.FireRate);
+            for (int i = 0; i < weapon.SpreadAmount; i++)
+            {
+
+                Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y);
+                Quaternion spawnRot = transform.rotation * Quaternion.Euler(0, 0, currentAngle);
+                GameObject spawned = pm.GetPooledObject(weapon.poolType, weapon.Bullet, spawnPos, spawnRot);
+                Bullet bullet = spawned.GetComponent<Bullet>();
+
+                if (bullet.usedPreviously)
+                {
+                    spawned.transform.SetLocalPositionAndRotation(spawnPos, spawnRot);
+                }
+
+                bullet.SetInUse();
+                currentAngle -= anglePerBullet;
+            }
+
+            burstCount++;
+            if (weapon.BurstAmount > 0 && burstCount < weapon.BurstAmount)
+            {
+                yield return new WaitForSeconds(weapon.BurstSpeed);
+            }
+            else
+                break;
+
+        }
+        
+        yield return new WaitForSeconds(weapon.FireRate + Random.Range(.01f, .05f));
 
         if (shooting)
         {
