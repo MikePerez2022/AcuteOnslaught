@@ -1,17 +1,18 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public float currentScore;
+    public int currentScore;
     public TMP_Text currentScoreText; // Can be removed if we'll only display the final highscore
     public TMP_Text finalScoreText;
     public TMP_Text highestScoreText;
 
     // Call whenever we'll calculate/update score: Wave Ended, Time Intervals, etc.
-    public void ChangeScore(int points)
+    public void ChangeScore(int points, float multiplier)
     {
-        currentScore += points;
+        currentScore += (int)Math.Truncate((double)(points * multiplier));
         currentScoreText.text = currentScore.ToString();
     }
 
