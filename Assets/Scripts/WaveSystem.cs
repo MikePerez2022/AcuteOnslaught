@@ -1,22 +1,26 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 public class WaveSystem : MonoBehaviour
 {
-    private float timeAlive = 0.0f;
-    private int waveDifficulty = 1;
-    private float bossInterval = 0;
-    private float waveDuration = 1;
+    private float timeAlive = 0f;
+    private float waveDifficulty;
+    private float bossInterval = 0f;
+    private int waveInterval = 10; // Time between waves
     public float spawnTimer;
+    private List<GameObject> currentWave = new List<GameObject>();
     public List<GameObject> enemyTypes = new List<GameObject>();
     public List<GameObject> bossTypes = new List<GameObject>();
     public List<Transform> spawnpoints = new List<Transform>();
-    private List<GameObject> currentWave = new List<GameObject>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        CreateWave();
+        SelectWaveEnemies();
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +37,7 @@ public class WaveSystem : MonoBehaviour
             }
             else
             {
-                CreateWave();
+                SelectWaveEnemies();
             }
             
         }
@@ -45,23 +49,41 @@ public class WaveSystem : MonoBehaviour
         // Spawn boss and increment wave difficulty
         if (bossInterval >= 40)
         {
+            // Fully random, better structure can be implemented once we have more details on wave progression
             Instantiate(bossTypes[Random.Range(0, bossTypes.Count)], spawnpoints[Random.Range(0, spawnpoints.Count)].position, Quaternion.identity);
             waveDifficulty++;
             bossInterval = 0;
         }
-    }
-    void CreateWave()
-    {
-        // Notify Wave Started
-        currentWave = SelectWaveEnemies();
-        spawnTimer = waveDuration / currentWave.Count;
-    }
-    List<GameObject> SelectWaveEnemies()
-    {
-        foreach (GameObject enemy in enemyTypes)
+
+        if (timeAlive % 60 == 0)
         {
-            currentWave.Add(enemy);
+            // Increase score every minute (Adjustable), increased bonus points based on time
+            // ScoreManager.ChangeScore(100, (int)(timeAlive / 60)); 
         }
-        return currentWave;
+    }
+    void SelectWaveEnemies()
+    {
+        // Adjust logic to select enemies based on wave difficulty to what we want
+        waveDifficulty = Math.Min(1, timeAlive / 60);
+        int waveCost = (int)(waveDifficulty * 10);
+        while (waveCost > 0)
+        {
+            int randIndex = Random.Range(0, enemyTypes.Count);
+            // Need enemies to have cost variable
+            /*
+            int randEnemyCost = enemyTypes[randIndex].GetComponent<Enemy>().cost;
+            // Need to make sure it can always find an enemy to add to the wave, always have one enemy with a cost of 1 for example
+            if (waveCost - randEnemyCost >= 0)
+            {
+                currentWave.Add(enemyTypes[randIndex]);
+                waveCost -= randEnemyCost;
+            }
+            else if (waveCost <= 0)
+            {
+                break;
+            }
+            */
+        }
+        spawnTimer = waveInterval / currentWave.Count;
     }
 }
