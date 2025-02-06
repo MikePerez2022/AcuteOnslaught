@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4314123921618977468}
   - component: {fileID: 7424608872301905029}
   - component: {fileID: 6845074988547499497}
-  - component: {fileID: 3899855591935880307}
+  - component: {fileID: 3289982113758811434}
   m_Layer: 10
   m_Name: BasicPlayerBullet
   m_TagString: Bullet
@@ -98,7 +98,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.29
---- !u!114 &3899855591935880307
+--- !u!114 &3289982113758811434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   usedPreviously: 0
   lifespan: 5
   damage: 5
-  speed: 5
+  speed: 20
 --- !u!1 &3751235518752469169
 GameObject:
   m_ObjectHideFlags: 0

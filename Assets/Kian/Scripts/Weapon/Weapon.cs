@@ -13,4 +13,6 @@ public class Weapon : ScriptableObject
     [field: SerializeField] public int SpreadAmount { get; private set; }
     [field: SerializeField] public int BurstAmount { get; private set; }
     [field: SerializeField] public float BurstSpeed { get; private set; }
+    [field: SerializeField] public float AddedAngle { get; private set; }
+    [field: SerializeField] public Vector2 RandomAngle { get; private set; }
 }
