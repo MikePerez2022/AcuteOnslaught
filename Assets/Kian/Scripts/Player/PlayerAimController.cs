@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class PlayerAimController : MonoBehaviour
 {
-    private Vector2 aimDir;
+    public Vector2 aimDir;
 
     private int touchIndex;
 
     private Vector2 RightTouchStartPos;
     private bool shooting;
+
+    [SerializeField] private ShootingManager sm;
 
     private void Start()
     {
@@ -25,19 +27,18 @@ public class PlayerAimController : MonoBehaviour
                 {
                     touchIndex = index;
                     RightTouchStartPos = touch.position;
-                    shooting = true;
+                    sm.Shoot(true);
                 }
                 else if (touch.phase == TouchPhase.Moved && index == touchIndex)
                 {
-                    
-                    aimDir = touch.position - RightTouchStartPos;
+                    aimDir = (touch.position - RightTouchStartPos).normalized;
                     float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
 
-                    transform.rotation = Quaternion.Euler(0, 0, angle);
+                    transform.rotation = Quaternion.Euler(0, 0, angle - 90);
                 }
                 else if (touch.phase == TouchPhase.Ended && index == touchIndex)
                 {
-                    shooting = false;
+                    sm.Shoot(false);
                     touchIndex = -1;
                 }
             }
