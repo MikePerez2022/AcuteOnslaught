@@ -3,8 +3,12 @@ using UnityEngine;
 public class WaveSystem : MonoBehaviour
 {
     private float timeAlive = 0.0f;
-    private float waveDifficulty = 1f;
-    public List<GameObject> enemySpawnList = new List<GameObject>();
+    private int waveDifficulty = 1;
+    private float bossInterval = 0;
+    public List<GameObject> enemyTypes = new List<GameObject>();
+    public List<GameObject> bossTypes = new List<GameObject>();
+    public List<Transform> spawnpoints = new List<Transform>();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,14 +18,33 @@ public class WaveSystem : MonoBehaviour
     void Update()
     {
         timeAlive += Time.deltaTime;
+        bossInterval += Time.deltaTime;
     }
     void CreateWave()
     {
         // Notify Wave Started
-        SelectWaveEnemies();
-    }
-    void SelectWaveEnemies()
-    {
+        List<GameObject> currentWave = SelectWaveEnemies();
         
+        // Spawn Enemies
+        foreach (GameObject enemy in currentWave)
+        {
+            Instantiate(enemy, spawnpoints[Random.Range(0, spawnpoints.Count)].position, Quaternion.identity);
+        }
+
+        if (bossInterval >= 40)
+        {
+            Instantiate(bossTypes[Random.Range(0, bossTypes.Count)], spawnpoints[Random.Range(0, spawnpoints.Count)].position, Quaternion.identity);
+            bossInterval = 0;
+            waveDifficulty++;
+        }
+    }
+    List<GameObject> SelectWaveEnemies()
+    {
+        List<GameObject> currentWave = new List<GameObject>();
+        foreach (GameObject enemy in enemyTypes)
+        {
+            currentWave.Add(enemy);
+        }
+        return currentWave;
     }
 }
