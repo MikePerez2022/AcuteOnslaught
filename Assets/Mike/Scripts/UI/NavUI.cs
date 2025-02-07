@@ -11,15 +11,11 @@ public class NavUI : MonoBehaviour
     [SerializeField] GameObject DeathScreen;
     [SerializeField] GameObject SettingsScreen;
 
+    [Header("Game:")]
+    [SerializeField] GameObject Player;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }
@@ -28,6 +24,7 @@ public class NavUI : MonoBehaviour
     {
         StartScreen.SetActive(false);
         GameScreen.SetActive(true);
+        Player.SetActive(true);
         print("Start Btn worked");
     }
 
