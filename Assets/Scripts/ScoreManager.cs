@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int currentScore;
+    private int currentScore = 0;
     public TMP_Text currentScoreText; // Can be removed if we'll only display the final highscore
     public TMP_Text finalScoreText;
     public TMP_Text highestScoreText;
 
-    // Call whenever we'll calculate/update score: Wave Ended, Time Intervals, etc.
+    // Call whenever we'll calculate/update score: Wave Ended, Enemy Death, etc.
+    // Need to discuss how/where multiplier will be stored/accessed
     public void ChangeScore(int points, float multiplier)
     {
-        currentScore += (int)Math.Truncate((double)(points * multiplier));
+        currentScore += (int)(points * multiplier); // Truncates after calculating score
         currentScoreText.text = currentScore.ToString();
     }
 
