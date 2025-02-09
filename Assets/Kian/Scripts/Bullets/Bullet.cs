@@ -11,8 +11,9 @@ public class Bullet : MonoBehaviour
 
     private float currentLifespan;
 
-    [SerializeField] private float damage;
-    [SerializeField] private float speed;
+    [SerializeField] protected float damage;
+    [SerializeField] protected float speed;
+    [SerializeField] protected GameObject parent;
 
     private void Update()
     {
@@ -25,11 +26,13 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public virtual void SetInUse()
+    public virtual void SetInUse(GameObject parentObject)
     {
         inUse = true;
         usedPreviously = true;
         currentLifespan = lifespan;
+
+        parent = parentObject;
 
         gameObject.SetActive(true);
 

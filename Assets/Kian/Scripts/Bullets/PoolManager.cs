@@ -46,5 +46,6 @@ public class Pool
 public enum PoolType
 {
     Normal,
-    Sin
+    Sin,
+    Laser
 }

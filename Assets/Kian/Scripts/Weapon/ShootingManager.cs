@@ -64,7 +64,7 @@ public class ShootingManager : MonoBehaviour
                     spawned.transform.SetLocalPositionAndRotation(spawnPos, spawnRot);
                 }
 
-                bullet.SetInUse();
+                bullet.SetInUse(gameObject);
                 currentAngle -= anglePerBullet;
             }
 
