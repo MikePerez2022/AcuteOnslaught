@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 4689437528910347260}
   - component: {fileID: 5274668808583113338}
   - component: {fileID: 4196255557914575568}
+  - component: {fileID: 2658849270260510373}
   - component: {fileID: 5463916608823080462}
   - component: {fileID: 8821957188359701183}
   - component: {fileID: 1184065736464919844}
@@ -230,7 +231,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5af99f6a20fb01e4fb38eb4f19895526, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -277,6 +278,42 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.165
+--- !u!58 &2658849270260510373
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6028385062525095356}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1536
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.3
 --- !u!114 &5463916608823080462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,7 +355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pm: {fileID: 6238762051883341384}
-  equippedGuns: []
+  equippedGuns:
+  - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
 --- !u!114 &6238762051883341384
 MonoBehaviour:
   m_ObjectHideFlags: 0

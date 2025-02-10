@@ -17,9 +17,9 @@ public class SinWaveMovement : Bullet
         transform.position = originalPos + new Vector2(transform.right.x * Mathf.Sin(timer * frequency) * amplitude, transform.right.y * Mathf.Sin(timer * frequency) * amplitude);
     }
 
-    public override void SetInUse()
+    public override void SetInUse(GameObject parentObject)
     {
-        base.SetInUse();
+        base.SetInUse(parentObject);
 
         timer += Random.Range(0.1f, 0.3f);
     }
