@@ -5,15 +5,15 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
 
-    public bool inUse = false;
-    public bool usedPreviously = false;
+    [HideInInspector] public bool inUse = false;
+    [HideInInspector] public bool usedPreviously = false;
     public float lifespan = 5.0f;
 
     private float currentLifespan;
 
     [SerializeField] protected float damage;
     [SerializeField] protected float speed;
-    [SerializeField] protected GameObject parent;
+    protected GameObject parent;
 
     private void Update()
     {

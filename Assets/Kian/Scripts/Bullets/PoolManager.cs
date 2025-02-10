@@ -47,5 +47,6 @@ public enum PoolType
 {
     Normal,
     Sin,
-    Laser
+    Laser,
+    Break
 }

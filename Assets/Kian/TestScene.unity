@@ -271,7 +271,7 @@ PrefabInstance:
     - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: 'equippedGuns.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
+      objectReference: {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
     - target: {fileID: 4689437528910347260, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
