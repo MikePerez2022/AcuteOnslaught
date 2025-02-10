@@ -1,46 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingManager : MonoBehaviour
+public class ShootingManagerSimple : MonoBehaviour
 {
     [SerializeField] private PoolManager pm;
-
-    [SerializeField] private List<Weapon> equippedGuns = new();
-
-    private List<bool> firingGuns = new();
-
-    private bool shooting = false;
-
-
-    private void Start()
-    {
-        foreach (Weapon weapon in equippedGuns)
-        {
-            firingGuns.Add(false);
-        }
-    }
-
-    public void Shoot(bool shoot)
-    {
-        shooting = shoot;
-
-        if (shooting)
-        {
-            for (int i = 0; i < equippedGuns.Count; i++) 
-            {
-                if (!firingGuns[i])
-                    StartCoroutine(SpawnBullet(equippedGuns[i], i));
-            }
-        }
-    }
-
     public IEnumerator SpawnBullet(Weapon weapon, int index)
     {
         int burstCount = 0;
         float currentAngle = 0;
         float anglePerBullet = 0;
-        firingGuns[index] = true;
 
         if (weapon.SpreadAmount > 1)
         {
@@ -77,26 +45,8 @@ public class ShootingManager : MonoBehaviour
                 break;
 
         }
-        
-        yield return new WaitForSeconds(weapon.FireRate + Random.Range(.01f, .05f));
 
-        if (shooting)
-        {
-            firingGuns[index] = true;
-            StartCoroutine(SpawnBullet(weapon, index));
-        }
-        else if (!shooting)
-        {
-            firingGuns[index] = false;
-            yield return null;
-        }
-    }
 
-    public void AddGun(Weapon weapon)
-    {
-        equippedGuns.Add(weapon);
-        firingGuns.Add(false);
-
-        Shoot(shooting);
+        yield return null;
     }
 }
