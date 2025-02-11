@@ -9,11 +9,11 @@ public class WaveSystem : MonoBehaviour
     private float waveDifficulty;
     private float bossInterval = 0f;
     private int waveInterval = 10; // Time between waves
-    public float spawnTimer;
+    private float spawnTimer;
     private List<GameObject> currentWave = new List<GameObject>();
-    public List<GameObject> enemyTypes = new List<GameObject>();
-    public List<GameObject> bossTypes = new List<GameObject>();
-    public List<Transform> spawnpoints = new List<Transform>();
+    [SerializeField] List<GameObject> enemyTypes = new List<GameObject>();
+    [SerializeField] List<GameObject> bossTypes = new List<GameObject>();
+    [SerializeField] List<Transform> spawnpoints = new List<Transform>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
