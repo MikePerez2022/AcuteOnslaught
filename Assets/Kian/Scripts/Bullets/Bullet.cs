@@ -28,15 +28,15 @@ public class Bullet : MonoBehaviour
 
     public virtual void SetInUse(GameObject parentObject)
     {
+        parent = parentObject;
         inUse = true;
         usedPreviously = true;
         currentLifespan = lifespan;
 
-        parent = parentObject;
+        rb.linearVelocity = transform.up * speed;
 
         gameObject.SetActive(true);
 
-        rb.linearVelocity = transform.up * speed;
 
     }
 
@@ -54,6 +54,9 @@ public class Bullet : MonoBehaviour
             health.DealDamage(damage);
             EndUsage();
         }
+
+        else if (collision.CompareTag("Arena"))
+            EndUsage();
         Debug.Log("Trigger");
     }
 }

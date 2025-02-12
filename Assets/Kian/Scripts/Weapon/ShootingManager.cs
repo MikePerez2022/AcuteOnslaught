@@ -56,6 +56,7 @@ public class ShootingManager : MonoBehaviour
 
                 Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y);
                 Quaternion spawnRot = transform.rotation * Quaternion.Euler(0, 0, currentAngle + weapon.AddedAngle + Random.Range(weapon.RandomAngle.x, weapon.RandomAngle.y));
+
                 GameObject spawned = pm.GetPooledObject(weapon.poolType, weapon.Bullet, spawnPos, spawnRot);
                 Bullet bullet = spawned.GetComponent<Bullet>();
 
