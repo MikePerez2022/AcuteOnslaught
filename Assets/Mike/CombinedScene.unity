@@ -1365,6 +1365,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+      propertyPath: 'equippedGuns.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cdbbc9b2c1b34b4c80635f3977be4f1, type: 2}
     - target: {fileID: 4689437528910347260, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1411,7 +1415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6028385062525095356, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2054,7 +2058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &743885946
 Transform:
   m_ObjectHideFlags: 0
@@ -2083,7 +2087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScoreText: {fileID: 2133362932}
-  finalScoreText: {fileID: 2133362932}
+  finalScoreText: {fileID: 616279194}
   highestScoreText: {fileID: 442069756}
 --- !u!114 &743885948
 MonoBehaviour:
@@ -2331,11 +2335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.67
+      value: 183.2
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.92
+      value: -16.2
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2530,11 +2534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.67
+      value: 172.9
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.92
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3133,6 +3137,8 @@ MonoBehaviour:
   DeathScreen: {fileID: 1226858892}
   SettingsScreen: {fileID: 1192250188}
   Player: {fileID: 192962339}
+  Spawner: {fileID: 743885945}
+  test: 0
 --- !u!1 &1038542642
 GameObject:
   m_ObjectHideFlags: 0
@@ -6277,11 +6283,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.67
+      value: 183.3
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.92
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6644,7 +6650,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1009702898}
         m_TargetAssemblyTypeName: NavUI, Assembly-CSharp
-        m_MethodName: OnQuitBtnPressed
+        m_MethodName: OnRestartBtnPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
