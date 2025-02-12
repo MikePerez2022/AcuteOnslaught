@@ -10,6 +10,7 @@ public class WaveSystem : MonoBehaviour
     private float waveInterval = 5f; // Time between waves
     private float spawnTimer = 0f;
     private float spawnInterval = 0f;
+
     private List<GameObject> currentWave = new List<GameObject>();
     [SerializeField] List<GameObject> enemyTypes = new List<GameObject>();
     [SerializeField] List<GameObject> bossTypes = new List<GameObject>();
@@ -26,6 +27,7 @@ public class WaveSystem : MonoBehaviour
     {
         timeAlive += Time.deltaTime;
         bossTimer += Time.deltaTime;
+
         if (spawnTimer <= 0)
         {
             // Spawn Enemies
@@ -68,7 +70,6 @@ public class WaveSystem : MonoBehaviour
         while (waveCost > 0)
         {
             int randIndex = Random.Range(0, enemyTypes.Count);
-            
             int randEnemyCost = enemyTypes[randIndex].GetComponent<AIScoring>().cost;
             // Need to make sure it can always find an enemy to add to the wave, always have one enemy with a cost of 1 for example
             if (waveCost - randEnemyCost >= 0)
@@ -83,7 +84,6 @@ public class WaveSystem : MonoBehaviour
             }
         }
         spawnInterval = waveInterval / (float)currentWave.Count;
-        Debug.Log("Spawn Interval: " + spawnInterval);
         spawnTimer = spawnInterval;
     }
 }
