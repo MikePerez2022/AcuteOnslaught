@@ -6,10 +6,10 @@ using Random = UnityEngine.Random;
 public class WaveSystem : MonoBehaviour
 {
     private float timeAlive = 0f;
-    private float waveDifficulty;
-    private float bossInterval = 0f;
-    private int waveInterval = 10; // Time between waves
-    public float spawnTimer;
+    private float bossTimer = 0f;
+    private float waveInterval = 5f; // Time between waves
+    private float spawnTimer = 0f;
+    private float spawnInterval = 0f;
     private List<GameObject> currentWave = new List<GameObject>();
     public List<GameObject> enemyTypes = new List<GameObject>();
     public List<GameObject> bossTypes = new List<GameObject>();
@@ -25,7 +25,7 @@ public class WaveSystem : MonoBehaviour
     void Update()
     {
         timeAlive += Time.deltaTime;
-        bossInterval += Time.deltaTime;
+        bossTimer += Time.deltaTime;
         if (spawnTimer <= 0)
         {
             // Spawn Enemies
@@ -34,12 +34,12 @@ public class WaveSystem : MonoBehaviour
                 int randIndex = Random.Range(0, currentWave.Count);
                 Instantiate(currentWave[randIndex], spawnpoints[Random.Range(0, spawnpoints.Count)].position, Quaternion.identity);
                 currentWave.RemoveAt(randIndex);
+                spawnTimer = spawnInterval;
             }
             else
             {
                 SelectWaveEnemies();
             }
-            
         }
         else
         {
@@ -47,12 +47,11 @@ public class WaveSystem : MonoBehaviour
         }
 
         // Spawn boss and increment wave difficulty
-        if (bossInterval >= 40)
+        if (bossTimer >= 40)
         {
             // Fully random, better structure can be implemented once we have more details on wave progression
             Instantiate(bossTypes[Random.Range(0, bossTypes.Count)], spawnpoints[Random.Range(0, spawnpoints.Count)].position, Quaternion.identity);
-            waveDifficulty++;
-            bossInterval = 0;
+            bossTimer = 0;
         }
 
         if (timeAlive % 60 == 0)
@@ -64,26 +63,27 @@ public class WaveSystem : MonoBehaviour
     void SelectWaveEnemies()
     {
         // Adjust logic to select enemies based on wave difficulty to what we want
-        waveDifficulty = Math.Min(1, timeAlive / 60);
+        float waveDifficulty = (timeAlive <= 30) ? 1 : timeAlive / 30;
         int waveCost = (int)(waveDifficulty * 10);
         while (waveCost > 0)
         {
             int randIndex = Random.Range(0, enemyTypes.Count);
-            // Need enemies to have cost variable
-            /*
-            int randEnemyCost = enemyTypes[randIndex].GetComponent<Enemy>().cost;
+            
+            int randEnemyCost = enemyTypes[randIndex].GetComponent<AIScoring>().cost;
             // Need to make sure it can always find an enemy to add to the wave, always have one enemy with a cost of 1 for example
             if (waveCost - randEnemyCost >= 0)
             {
                 currentWave.Add(enemyTypes[randIndex]);
                 waveCost -= randEnemyCost;
             }
-            else if (waveCost <= 0)
+            
+            if (waveCost == 0)
             {
                 break;
             }
-            */
         }
-        spawnTimer = waveInterval / currentWave.Count;
+        spawnInterval = waveInterval / (float)currentWave.Count;
+        Debug.Log("Spawn Interval: " + spawnInterval);
+        spawnTimer = spawnInterval;
     }
 }
