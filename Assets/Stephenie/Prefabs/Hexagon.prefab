@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 610616039681730286}
   - component: {fileID: -7333672123652409670}
   - component: {fileID: 4355117353282651235}
+  - component: {fileID: 2820551562104408941}
+  - component: {fileID: 8494058005321099890}
+  - component: {fileID: 3004248352087317977}
   m_Layer: 0
   m_Name: Hexagon
   m_TagString: Untagged
@@ -46,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceac6b3aef2f90d46a0a681d0f8ca8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6028385062525095356, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+  player: {fileID: 0}
   speed: 3.5
 --- !u!114 &-7333672123652409670
 MonoBehaviour:
@@ -117,3 +120,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2820551562104408941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335061098875966246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28723befc957394092908e053fcfbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <health>k__BackingField: 15
+--- !u!114 &8494058005321099890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335061098875966246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1a66068a305ab499a8f355635b9ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3004248352087317977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335061098875966246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8df523c224a7534d9098a5ee98ab9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pm: {fileID: 8494058005321099890}
+  equippedGuns:
+  - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
