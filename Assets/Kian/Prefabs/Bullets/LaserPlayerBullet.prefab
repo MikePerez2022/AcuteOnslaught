@@ -79,11 +79,13 @@ MonoBehaviour:
   lifespan: 5
   damage: 0
   speed: 0
-  parent: {fileID: 0}
   lr: {fileID: 5766049378293064789}
   laserWidth: 1
   shrinkSpeed: 4
   lerpSpeed: 6
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!120 &5766049378293064789
 LineRenderer:
   serializedVersion: 2
@@ -128,7 +130,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
