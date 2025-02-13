@@ -83,7 +83,6 @@ public class WaveSystem : MonoBehaviour
             }
         }
         spawnInterval = waveInterval / (float)currentWave.Count;
-        Debug.Log("Spawn Interval: " + spawnInterval);
         spawnTimer = spawnInterval;
     }
 }
