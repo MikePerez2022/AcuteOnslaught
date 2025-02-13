@@ -15,13 +15,12 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            Death();
             if (this.GetComponent<AIScoring>() != null)
             {
                 ScoreManager.instance.multiplier += 0.1f;
                 ScoreManager.instance.ChangeScore(this.GetComponent<AIScoring>().score);
             }
-            
+            Death();
         }
     }
 
