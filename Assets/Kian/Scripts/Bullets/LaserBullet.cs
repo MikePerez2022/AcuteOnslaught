@@ -10,6 +10,7 @@ public class LaserBullet : Bullet
     [SerializeField] private float lerpSpeed;
 
     [SerializeField] private LayerMask wallMask;
+    [SerializeField] protected LayerMask hitMask;
 
     private Vector2 hitLocation;
     public override void SetInUse(GameObject parentObject)
@@ -24,19 +25,16 @@ public class LaserBullet : Bullet
         RaycastHit2D wallCheck = Physics2D.Raycast(transform.position, transform.up, Mathf.Infinity, wallMask);
         hitLocation = wallCheck.point;
 
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, lr.widthMultiplier * .5f, transform.up, Vector2.Distance(transform.position, wallCheck.point));
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, lr.widthMultiplier * .5f, transform.up, Vector2.Distance(transform.position, wallCheck.point), hitMask);
 
         if (hits.Length > 0)
         {
             foreach (RaycastHit2D hit in hits)
             {
-                if (hit.collider.gameObject != parentObject)
+                if (hit.collider.TryGetComponent(out Health health))
                 {
-                    if (hit.collider.TryGetComponent(out Health health))
-                    {
-                        health.DealDamage(damage);
-                    };
-                }
+                    health.DealDamage(damage);
+                };
             }
         }
 
