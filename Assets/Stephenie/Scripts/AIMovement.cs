@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AIMovement : MonoBehaviour 
 {
+    [SerializeField] public ShootingManager Sm;
+    public Weapon w;
     public GameObject player;
     public float speed;
 
     private float distance;
+    private float time;
 
     void Start()
     {
@@ -22,7 +26,19 @@ public class AIMovement : MonoBehaviour
     
         //Update position and rotation to move to and look at player
         transform.position = Vector2.MoveTowards(this.transform.position,player.transform.position, speed * Time.deltaTime);
-        transform.rotation = Quaternion.Euler(Vector3.forward * angle); 
+        transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+
+        
+        if (distance <= 50)
+        {
+            Sm.Shoot(true);
+            Console.WriteLine("shooting bullets");
+        }
+        else
+        {
+            Sm.Shoot(false);
+        }
     }
+        
     
 }

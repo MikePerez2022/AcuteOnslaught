@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5f5e94988971f484c9f62342cb945a60
+guid: ed2973ee51f6b6a439a39e8c6ac778e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -709933385469371807
-    second: Button Normal_0
+      213: -4373184736405950995
+    second: floor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,30 +122,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button Normal_0
+      name: floor_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 114
-        height: 38
+        x: 83
+        y: 58
+        width: 1869
+        height: 1942
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16a58e8e85fc526f0800000000000000
-      internalID: -709933385469371807
+      spriteID: dedec5107a35f43c0800000000000000
+      internalID: -4373184736405950995
       vertices: []
       indices: 
       edges: []
@@ -174,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Button Normal_0: -709933385469371807
+      floor_0: -4373184736405950995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
