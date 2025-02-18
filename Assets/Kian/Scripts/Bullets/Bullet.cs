@@ -49,7 +49,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent<Health>(out Health health))
+        if (collision.gameObject.TryGetComponent(out Health health))
         {
             health.DealDamage(damage);
             EndUsage();
