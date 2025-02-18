@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 264657235572817782}
   - component: {fileID: -5508855618174861273}
   - component: {fileID: 4355117353282651235}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceac6b3aef2f90d46a0a681d0f8ca8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sm: {fileID: 0}
-  w: {fileID: 0}
+  Sm: {fileID: 5004566573425903979}
+  w: {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
   player: {fileID: 0}
   speed: 4.5
 --- !u!114 &-7333672123652409670
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pm: {fileID: 6553652274715810081}
   equippedGuns:
-  - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
+  - {fileID: 11400000, guid: 7fd80eada0a47e343ae416122d2ec115, type: 2}
 --- !u!114 &6553652274715810081
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,5 +19,5 @@ MonoBehaviour:
   <SpreadAmount>k__BackingField: 1
   <BurstAmount>k__BackingField: 0
   <BurstSpeed>k__BackingField: 0
-  <AddedAngle>k__BackingField: 0
+  <AddedAngle>k__BackingField: -90
   <RandomAngle>k__BackingField: {x: -10, y: 10}

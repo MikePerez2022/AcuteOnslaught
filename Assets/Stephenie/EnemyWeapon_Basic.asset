@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 364af342f9e98c54e9d4abd82c37193e, type: 3}
   <poolType>k__BackingField: 0
-  <FireRate>k__BackingField: 2
+  <FireRate>k__BackingField: 3
   <SpreadAngle>k__BackingField: 25
-  <SpreadAmount>k__BackingField: 5
+  <SpreadAmount>k__BackingField: 3
   <BurstAmount>k__BackingField: 5
   <BurstSpeed>k__BackingField: 0.2
-  <AddedAngle>k__BackingField: 0
+  <AddedAngle>k__BackingField: -90
   <RandomAngle>k__BackingField: {x: 0, y: 0}
