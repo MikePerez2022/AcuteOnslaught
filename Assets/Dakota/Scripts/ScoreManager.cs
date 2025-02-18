@@ -5,9 +5,9 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     private int currentScore = 0;
-    public TMP_Text currentScoreText; // Can be removed if we'll only display the final highscore
-    public TMP_Text finalScoreText;
-    public TMP_Text highestScoreText;
+    [SerializeField] TMP_Text currentScoreText; // Can be removed if we'll only display the final highscore
+    [SerializeField] TMP_Text finalScoreText;
+    [SerializeField] TMP_Text highestScoreText;
 
     // Call whenever we'll calculate/update score: Wave Ended, Enemy Death, etc.
     // Need to discuss how/where multiplier will be stored/accessed
