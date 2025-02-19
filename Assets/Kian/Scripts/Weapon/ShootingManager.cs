@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingManager : MonoBehaviour
 {
-    [SerializeField] private PoolManager pm;
+    private PoolManager pm;
 
     [SerializeField] private List<Weapon> equippedGuns = new();
 
@@ -19,6 +19,8 @@ public class ShootingManager : MonoBehaviour
         {
             firingGuns.Add(false);
         }
+
+        pm = PoolManager.instance;
     }
 
     public void Shoot(bool shoot)

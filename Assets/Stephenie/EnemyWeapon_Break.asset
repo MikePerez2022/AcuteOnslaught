@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyWeapon_Break
   m_EditorClassIdentifier: 
   <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 364af342f9e98c54e9d4abd82c37193e, type: 3}
-  <poolType>k__BackingField: 3
+  <poolType>k__BackingField: 7
   <FireRate>k__BackingField: 1
   <SpreadAngle>k__BackingField: 0
   <SpreadAmount>k__BackingField: 1

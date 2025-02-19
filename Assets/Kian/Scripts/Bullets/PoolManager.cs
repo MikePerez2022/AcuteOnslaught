@@ -3,8 +3,18 @@ using UnityEngine;
 
 public class PoolManager : MonoBehaviour
 {
+    public static PoolManager instance;
+
     private Dictionary<PoolType, Pool> pools = new();
 
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     public void NewPool(PoolType type)
     {
@@ -48,5 +58,9 @@ public enum PoolType
     Normal,
     Sin,
     Laser,
-    Break
+    Break,
+    ENormal,
+    ESin,
+    ELaser,
+    EBreak
 }

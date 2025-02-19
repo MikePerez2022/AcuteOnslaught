@@ -33,6 +33,7 @@ public class Bullet : MonoBehaviour
         usedPreviously = true;
         currentLifespan = lifespan;
 
+        rb.linearVelocity = Vector3.zero;
         rb.linearVelocity = transform.up * speed;
 
         gameObject.SetActive(true);
