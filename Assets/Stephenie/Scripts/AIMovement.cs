@@ -15,7 +15,7 @@ public class AIMovement : MonoBehaviour
 
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {
