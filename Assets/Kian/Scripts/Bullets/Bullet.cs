@@ -28,6 +28,7 @@ public class Bullet : MonoBehaviour
 
     public virtual void SetInUse(GameObject parentObject)
     {
+        gameObject.SetActive(true);
         parent = parentObject;
         inUse = true;
         usedPreviously = true;
@@ -36,7 +37,6 @@ public class Bullet : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.linearVelocity = transform.up * speed;
 
-        gameObject.SetActive(true);
 
 
     }

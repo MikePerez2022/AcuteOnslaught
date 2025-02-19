@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 610616039681730286}
   - component: {fileID: -7333672123652409670}
   - component: {fileID: 5004566573425903979}
-  - component: {fileID: 6553652274715810081}
   - component: {fileID: 264657235572817782}
   - component: {fileID: -5508855618174861273}
   - component: {fileID: 4355117353282651235}
-  m_Layer: 0
+  - component: {fileID: 1202034748705534947}
+  m_Layer: 8
   m_Name: Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceac6b3aef2f90d46a0a681d0f8ca8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sm: {fileID: 0}
-  w: {fileID: 0}
+  Sm: {fileID: 5004566573425903979}
+  w: {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
   player: {fileID: 0}
   speed: 4.5
 --- !u!114 &-7333672123652409670
@@ -80,21 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8df523c224a7534d9098a5ee98ab9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pm: {fileID: 6553652274715810081}
   equippedGuns:
   - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
---- !u!114 &6553652274715810081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2335061098875966246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb1a66068a305ab499a8f355635b9ffb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &264657235572817782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +95,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <health>k__BackingField: 6
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1202034748705534947}
+        m_TargetAssemblyTypeName: WeaponPickupSpawner, Assembly-CSharp
+        m_MethodName: SpawnPickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyOnDeath: 1
 --- !u!61 &-5508855618174861273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -209,3 +212,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1202034748705534947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335061098875966246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444ded29a21048345a364b79d8d14975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupDropChance: 1
+  pickupObject: {fileID: 2231478859532105078, guid: fdb80c217ab3556488fb5423452014b5, type: 3}
+  possibleDrops:
+  - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
+  - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
+  - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
+  - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
