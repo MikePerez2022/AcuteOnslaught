@@ -9,6 +9,10 @@ public class LaserBullet : Bullet
     [SerializeField] private float shrinkSpeed;
     [SerializeField] private float lerpSpeed;
 
+    [SerializeField] private LayerMask wallMask;
+    [SerializeField] protected LayerMask hitMask;
+
+    private Vector2 hitLocation;
     public override void SetInUse(GameObject parentObject)
     {
         base.SetInUse(parentObject);
@@ -18,19 +22,28 @@ public class LaserBullet : Bullet
         lr.SetPosition(1, transform.position);
         disappear = true;
 
-        RaycastHit2D[] hit = Physics2D.CircleCastAll(transform.position, lr.widthMultiplier * .5f, transform.up, 30);
-        foreach(RaycastHit2D rayHit in hit)
+        RaycastHit2D wallCheck = Physics2D.Raycast(transform.position, transform.up, Mathf.Infinity, wallMask);
+        hitLocation = wallCheck.point;
+
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, lr.widthMultiplier * .5f, transform.up, Vector2.Distance(transform.position, wallCheck.point), hitMask);
+
+        if (hits.Length > 0)
         {
-            if (rayHit.collider.gameObject != parentObject)
+            foreach (RaycastHit2D hit in hits)
             {
-                rayHit.collider.GetComponent<Health>().DealDamage(damage);
+                if (hit.collider.TryGetComponent(out Health health))
+                {
+                    health.DealDamage(damage);
+                };
             }
         }
+
+        
     }
 
     private void Update()
     {
-        lr.SetPosition(1, Vector3.Lerp(lr.GetPosition(1), lr.GetPosition(0) + transform.up * 50, Time.deltaTime * lerpSpeed));
+        lr.SetPosition(1, Vector3.Lerp(lr.GetPosition(1), hitLocation, Time.deltaTime * lerpSpeed));
 
         if (disappear)
         {
