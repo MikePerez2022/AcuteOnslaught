@@ -1,14 +1,17 @@
 using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     [field: SerializeField] public float health { get; private set; }
+    public UnityEvent deathEvent;
+    [SerializeField] private bool destroyOnDeath = true;
 
     public virtual void DealDamage(float amount)
     {
         health -= amount;
-        if (this.CompareTag("Player"))
+        if (CompareTag("Player"))
         {
             ScoreManager.instance.multiplier = 1f;
         }
@@ -26,6 +29,9 @@ public class Health : MonoBehaviour
 
     public virtual void Death()
     {
-        Destroy(gameObject);
+        deathEvent?.Invoke();
+
+        if (destroyOnDeath)
+            Destroy(gameObject);
     }
 }

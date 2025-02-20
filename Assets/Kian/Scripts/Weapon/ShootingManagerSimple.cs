@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ShootingManagerSimple : MonoBehaviour
 {
-    [SerializeField] private PoolManager pm;
     public IEnumerator SpawnBullet(Weapon weapon, int index)
     {
         int burstCount = 0;
@@ -24,7 +23,7 @@ public class ShootingManagerSimple : MonoBehaviour
 
                 Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y);
                 Quaternion spawnRot = transform.rotation * Quaternion.Euler(0, 0, currentAngle + weapon.AddedAngle + Random.Range(weapon.RandomAngle.x, weapon.RandomAngle.y));
-                GameObject spawned = pm.GetPooledObject(weapon.poolType, weapon.Bullet, spawnPos, spawnRot);
+                GameObject spawned = PoolManager.instance.GetPooledObject(weapon.poolType, weapon.Bullet, spawnPos, spawnRot);
                 Bullet bullet = spawned.GetComponent<Bullet>();
 
                 if (bullet.usedPreviously)
