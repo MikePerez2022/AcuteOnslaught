@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equippedGuns:
-  - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
+  - {fileID: 11400000, guid: 9c7fd4b76902f8041b99b4d45c50b0cb, type: 2}
 --- !u!114 &2820551562104408941
 MonoBehaviour:
   m_ObjectHideFlags: 0
