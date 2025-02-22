@@ -460,17 +460,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2761943125451882379, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
   m_PrefabInstance: {fileID: 1131251284}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &170992072 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3004248352087317977, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-  m_PrefabInstance: {fileID: 1131251284}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170992066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8df523c224a7534d9098a5ee98ab9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &171093660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1347,42 +1336,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1890445708}
     m_Modifications:
-    - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 625036314}
-    - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpawnPickup
-      objectReference: {fileID: 0}
-    - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: WeaponPickupSpawner, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 610616039681730286, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: w
-      value: 
-      objectReference: {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
-    - target: {fileID: 610616039681730286, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: Sm
-      value: 
-      objectReference: {fileID: 625036319}
     - target: {fileID: 610616039681730286, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
       propertyPath: player
       value: 
@@ -1390,10 +1343,6 @@ PrefabInstance:
     - target: {fileID: 2335061098875966246, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
       propertyPath: m_Name
       value: Diamond
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335061098875966246, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1435,17 +1384,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5004566573425903979, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      propertyPath: 'equippedGuns.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 1a5f650a8faef2f41b0fdd62e87fd08c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2335061098875966246, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 625036314}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
 --- !u!1001 &517724200
 PrefabInstance:
@@ -2012,36 +1954,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2761943125451882379, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
   m_PrefabInstance: {fileID: 480850452}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &625036314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625036312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444ded29a21048345a364b79d8d14975, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupDropChance: 1
-  pickupObject: {fileID: 2231478859532105078, guid: fdb80c217ab3556488fb5423452014b5, type: 3}
-  possibleDrops:
-  - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
-  - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
-  - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
-  - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
---- !u!114 &625036319 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5004566573425903979, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
-  m_PrefabInstance: {fileID: 480850452}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625036312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8df523c224a7534d9098a5ee98ab9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &671095193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,10 +3098,15 @@ MonoBehaviour:
   StartScreen: {fileID: 460916020}
   GameScreen: {fileID: 1261829394}
   DeathScreen: {fileID: 1226858892}
+  PauseScreen: {fileID: 0}
   SettingsScreen: {fileID: 1192250188}
   Player: {fileID: 192962339}
+  A_Music: {fileID: 0}
+  M_Music: {fileID: 0}
+  D_Music: {fileID: 0}
   Spawner: {fileID: 743885945}
   test: 0
+  AudioList: []
 --- !u!1 &1038542642
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,24 +3249,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 1890445708}
     m_Modifications:
     - target: {fileID: 610616039681730286, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: w
-      value: 
-      objectReference: {fileID: 11400000, guid: 9c7fd4b76902f8041b99b4d45c50b0cb, type: 2}
-    - target: {fileID: 610616039681730286, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: Sm
-      value: 
-      objectReference: {fileID: 170992072}
-    - target: {fileID: 610616039681730286, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 192962339}
     - target: {fileID: 2335061098875966246, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
       propertyPath: m_Name
       value: Hexagon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335061098875966246, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3391,37 +3296,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpawnPickup
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: WeaponPickupSpawner, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5894,6 +5769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arena
       objectReference: {fileID: 0}
+    - target: {fileID: 2365715323357655679, guid: b7a16efa758645f42a8fded058f342af, type: 3}
+      propertyPath: m_TagString
+      value: Arena
+      objectReference: {fileID: 0}
     - target: {fileID: 3205060504385281014, guid: b7a16efa758645f42a8fded058f342af, type: 3}
       propertyPath: m_Radius
       value: 1.36
@@ -6495,17 +6374,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2761943125451882379, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
   m_PrefabInstance: {fileID: 1771516089}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1517542087 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -5331293757783098651, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-  m_PrefabInstance: {fileID: 1771516089}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517542085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8df523c224a7534d9098a5ee98ab9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1564122332
 GameObject:
   m_ObjectHideFlags: 0
@@ -6960,18 +6828,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1890445708}
     m_Modifications:
-    - target: {fileID: -7333672123652409670, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: score
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 610616039681730286, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: w
-      value: 
-      objectReference: {fileID: 11400000, guid: 1a5f650a8faef2f41b0fdd62e87fd08c, type: 2}
-    - target: {fileID: 610616039681730286, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: Sm
-      value: 
-      objectReference: {fileID: 1517542087}
     - target: {fileID: 610616039681730286, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
       propertyPath: player
       value: 
@@ -6979,10 +6835,6 @@ PrefabInstance:
     - target: {fileID: 2335061098875966246, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
       propertyPath: m_Name
       value: Square
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335061098875966246, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2761943125451882379, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7024,36 +6876,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpawnPickup
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: WeaponPickupSpawner, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
-      propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

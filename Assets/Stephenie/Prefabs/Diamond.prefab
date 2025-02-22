@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 264657235572817782}
   - component: {fileID: -5508855618174861273}
   - component: {fileID: 4355117353282651235}
-  - component: {fileID: 1202034748705534947}
+  - component: {fileID: 7938359173022198301}
+  - component: {fileID: 2384430815211801188}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Untagged
@@ -81,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equippedGuns:
-  - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
+  - {fileID: 11400000, guid: 1a5f650a8faef2f41b0fdd62e87fd08c, type: 2}
 --- !u!114 &264657235572817782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,11 +96,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <health>k__BackingField: 6
+  maxHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1202034748705534947}
+      - m_Target: {fileID: 7938359173022198301}
         m_TargetAssemblyTypeName: WeaponPickupSpawner, Assembly-CSharp
+        m_MethodName: SpawnPickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2384430815211801188}
+        m_TargetAssemblyTypeName: HealthPickupSpawner, Assembly-CSharp
         m_MethodName: SpawnPickup
         m_Mode: 1
         m_Arguments:
@@ -212,7 +226,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1202034748705534947
+--- !u!114 &7938359173022198301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,10 +238,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444ded29a21048345a364b79d8d14975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupDropChance: 1
+  pickupDropChance: 0.05
   pickupObject: {fileID: 2231478859532105078, guid: fdb80c217ab3556488fb5423452014b5, type: 3}
   possibleDrops:
   - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
   - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
   - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
   - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
+--- !u!114 &2384430815211801188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335061098875966246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2feb5b8b8af2c4f418b4dc32ab476215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupDropChance: 0.1
+  pickupObject: {fileID: 9171991882067708731, guid: 4d0bbf22e83d1264a8ad709bb3e0007a, type: 3}

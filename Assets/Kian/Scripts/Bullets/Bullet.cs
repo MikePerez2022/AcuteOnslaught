@@ -58,6 +58,5 @@ public class Bullet : MonoBehaviour
 
         else if (collision.CompareTag("Arena"))
             EndUsage();
-        Debug.Log("Trigger");
     }
 }
