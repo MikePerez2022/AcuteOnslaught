@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HealthPickup : Pickup
 {
-    [SerializeField] private float healthToGive;
+    public float healthToGive;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

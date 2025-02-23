@@ -5,7 +5,6 @@ public class LaserBullet : Bullet
     [SerializeField] LineRenderer lr;
 
     private bool disappear;
-    [SerializeField] private float laserWidth;
     [SerializeField] private float shrinkSpeed;
     [SerializeField] private float lerpSpeed;
 
@@ -17,7 +16,6 @@ public class LaserBullet : Bullet
     {
         base.SetInUse(parentObject);
 
-        lr.widthMultiplier = laserWidth;
         lr.SetPosition(0, transform.position);
         lr.SetPosition(1, transform.position);
         disappear = true;
@@ -39,6 +37,14 @@ public class LaserBullet : Bullet
         }
 
         
+    }
+
+    public override void SetStats(Weapon weapon)
+    {
+        base.SetStats(weapon);
+
+        lr.widthMultiplier = weapon.Scale;
+
     }
 
     private void Update()

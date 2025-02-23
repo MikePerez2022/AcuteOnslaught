@@ -15,13 +15,19 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected float speed;
     protected GameObject parent;
 
+    private bool scaleEffectsDamage;
+    private bool scalesOverTime;
+    private float scaleChangeOverTime;
+
     private void Update()
     {
         currentLifespan -= Time.deltaTime;
 
-        if (currentLifespan <= 0 && inUse)
+        if (scalesOverTime)
+            transform.localScale += new Vector3(scaleChangeOverTime, scaleChangeOverTime);
+
+        if ((currentLifespan <= 0 || transform.localScale.x <= 0) && inUse)
         {
-            Debug.Log("Lifespan");
             EndUsage();
         }
     }
@@ -38,12 +44,15 @@ public class Bullet : MonoBehaviour
         rb.linearVelocity = transform.up * speed;
     }
 
-    public void SetStats(Weapon weapon)
+    public virtual void SetStats(Weapon weapon)
     {
         speed = weapon.Speed + Random.Range(weapon.RandomSpeedAddition.x, weapon.RandomSpeedAddition.y);
         float scaleChange = Random.Range(weapon.RandomScaleAddition.x, weapon.RandomScaleAddition.y);
         gameObject.transform.localScale = new Vector3(weapon.Scale + scaleChange, weapon.Scale + scaleChange, 1);
-        damage = (weapon.ScaleEffectsDamage) ? weapon.Damage * gameObject.transform.localScale.x : weapon.Damage;
+        damage = weapon.Damage;
+        scaleEffectsDamage = weapon.ScaleEffectsDamage;
+        scalesOverTime = weapon.ScalesOverTime;
+        scaleChangeOverTime = weapon.ScaleChangeOverTime;
     }
 
     public virtual void EndUsage()
@@ -57,7 +66,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Health health))
         {
-            health.DealDamage(damage);
+            health.DealDamage((scaleEffectsDamage) ? damage * gameObject.transform.localScale.x : damage);
             EndUsage();
         }
 

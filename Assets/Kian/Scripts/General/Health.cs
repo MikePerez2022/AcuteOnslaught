@@ -61,12 +61,18 @@ public class Health : MonoBehaviour
         TMP_Text text = spawned.GetComponent<TMP_Text>();
         text.text = Mathf.Floor(damageDealt).ToString();
         text.color = spriteRenderer.color;
-        text.fontSize = damageDealt;
+        text.fontSize = Mathf.Clamp(damageDealt, 0, 75);
     }
 
     public virtual void Death()
     {
         deathEvent?.Invoke();
+
+        if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            WeaponPickupSpawner.instance.SpawnPickup((Vector2)transform.position);
+            HealthPickupSpawner.instance.SpawnPickup((Vector2)transform.position);
+        }
 
         if (destroyOnDeath)
             Destroy(gameObject);

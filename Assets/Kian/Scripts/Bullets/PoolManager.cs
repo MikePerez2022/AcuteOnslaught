@@ -59,6 +59,7 @@ public enum PoolType
     Sin,
     Laser,
     Break,
+    BreakToBreak,
     ENormal,
     ESin,
     ELaser,

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1984396809062883084}
   - component: {fileID: 8061852472170245711}
   m_Layer: 10
-  m_Name: BreakingPlayerBullet2
+  m_Name: BreakToBreakPlayerBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,8 +118,8 @@ MonoBehaviour:
   lifespan: 5
   damage: 5
   speed: 5
-  timeBeforeBreak: 0.5
-  breakStats: {fileID: 11400000, guid: d0f2026132c77124a925d2cf1b309829, type: 2}
+  timeBeforeBreak: 1
+  breakStats: {fileID: 11400000, guid: 1776cc3f7f3ca8542a2a0f079c612ac6, type: 2}
   sm: {fileID: 1984396809062883084}
 --- !u!114 &1984396809062883084
 MonoBehaviour:

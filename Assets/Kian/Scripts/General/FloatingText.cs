@@ -12,7 +12,7 @@ public class FloatingText : MonoBehaviour
 
     private void Start()
     {
-        Vector2 dir = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)).normalized;
+        Vector2 dir = new Vector2(Random.Range(-1.0f, 1.0f), 1);
         rb.AddForce(new Vector2(dir.x * Random.Range(launchForceMinMax.x, launchForceMinMax.y), dir.y * Random.Range(launchForceMinMax.x, launchForceMinMax.y)), ForceMode2D.Force);
     }
 

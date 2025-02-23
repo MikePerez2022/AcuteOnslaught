@@ -36,7 +36,7 @@ public class ShootingManagerSimple : MonoBehaviour
             }
 
             burstCount++;
-            if (weapon.BurstAmount > 0 && burstCount < weapon.BurstAmount)
+            if (burstCount < weapon.BurstAmount)
             {
                 yield return new WaitForSeconds(weapon.BurstSpeed);
             }

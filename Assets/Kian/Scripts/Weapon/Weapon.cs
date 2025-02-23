@@ -10,6 +10,8 @@ public class Weapon : ScriptableObject
     [field: SerializeField] public Vector2 RandomSpeedAddition { get; private set; }
     [field: SerializeField] public float Damage { get; private set; }
     [field: SerializeField] public float Scale { get; private set; }
+    [field: SerializeField] public bool ScalesOverTime { get; private set; }
+    [field: SerializeField] public float ScaleChangeOverTime { get; private set; }
     [field: SerializeField] public Vector2 RandomScaleAddition { get; private set; }
     [field: SerializeField, Tooltip("makes scale act like a damage multiplier")] public bool ScaleEffectsDamage { get; private set; }
     

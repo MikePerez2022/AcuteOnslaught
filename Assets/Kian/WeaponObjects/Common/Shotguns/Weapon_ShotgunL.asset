@@ -14,15 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 42104f90633444341bbcb9a551eeafa9, type: 3}
   <poolType>k__BackingField: 0
-  <Speed>k__BackingField: 15
+  <Speed>k__BackingField: 25
   <RandomSpeedAddition>k__BackingField: {x: -3, y: 3}
-  <Damage>k__BackingField: 5
-  <Scale>k__BackingField: 0.5
+  <Damage>k__BackingField: 3
+  <Scale>k__BackingField: 2
+  <ScalesOverTime>k__BackingField: 1
+  <ScaleChangeOverTime>k__BackingField: -0.05
   <RandomScaleAddition>k__BackingField: {x: -0.2, y: 0.2}
   <ScaleEffectsDamage>k__BackingField: 1
   <FireRate>k__BackingField: 1
-  <SpreadAngle>k__BackingField: 45
-  <SpreadAmount>k__BackingField: 7
+  <SpreadAngle>k__BackingField: 25
+  <SpreadAmount>k__BackingField: 4
   <BurstAmount>k__BackingField: 0
   <BurstSpeed>k__BackingField: 0
   <AddedAngle>k__BackingField: 90

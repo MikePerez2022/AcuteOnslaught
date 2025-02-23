@@ -44,6 +44,8 @@ public class ShootingManager : MonoBehaviour
         float anglePerBullet = 0;
         firingGuns[index] = true;
 
+        yield return new WaitForSeconds(Random.Range(.01f, .05f));
+
         if (weapon.SpreadAmount > 1)
         {
             anglePerBullet = weapon.SpreadAngle / (weapon.SpreadAmount - 1);
@@ -81,7 +83,7 @@ public class ShootingManager : MonoBehaviour
 
         }
         
-        yield return new WaitForSeconds(weapon.FireRate + Random.Range(.01f, .05f));
+        yield return new WaitForSeconds(weapon.FireRate);
 
         if (shooting)
         {
@@ -100,6 +102,7 @@ public class ShootingManager : MonoBehaviour
         equippedGuns.Add(weapon);
         firingGuns.Add(false);
 
-        Shoot(shooting);
+        if (shooting)
+            Shoot(shooting);
     }
 }
