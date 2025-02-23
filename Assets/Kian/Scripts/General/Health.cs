@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,6 +9,10 @@ public class Health : MonoBehaviour
     [SerializeField] private float maxHealth;
     public UnityEvent deathEvent;
     [SerializeField] private bool destroyOnDeath = true;
+
+
+    public GameObject textPrefab;
+    public SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
@@ -32,6 +37,13 @@ public class Health : MonoBehaviour
             ScoreManager.instance.multiplier = 1f;
         }
 
+
+        if (textPrefab != null)
+        {
+            ShowFloatingText(amount);
+        }
+
+
         if (health <= 0)
         {
             if (this.GetComponent<AIScoring>() != null)
@@ -41,6 +53,15 @@ public class Health : MonoBehaviour
             }
             Death();
         }
+    }
+
+    private void ShowFloatingText(float damageDealt)
+    {
+        GameObject spawned = Instantiate(textPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(-45, 45)));
+        TMP_Text text = spawned.GetComponent<TMP_Text>();
+        text.text = Mathf.Floor(damageDealt).ToString();
+        text.color = spriteRenderer.color;
+        text.fontSize = damageDealt;
     }
 
     public virtual void Death()

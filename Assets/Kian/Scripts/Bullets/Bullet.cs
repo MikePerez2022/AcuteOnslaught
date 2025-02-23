@@ -36,9 +36,14 @@ public class Bullet : MonoBehaviour
 
         rb.linearVelocity = Vector3.zero;
         rb.linearVelocity = transform.up * speed;
+    }
 
-
-
+    public void SetStats(Weapon weapon)
+    {
+        speed = weapon.Speed + Random.Range(weapon.RandomSpeedAddition.x, weapon.RandomSpeedAddition.y);
+        float scaleChange = Random.Range(weapon.RandomScaleAddition.x, weapon.RandomScaleAddition.y);
+        gameObject.transform.localScale = new Vector3(weapon.Scale + scaleChange, weapon.Scale + scaleChange, 1);
+        damage = (weapon.ScaleEffectsDamage) ? weapon.Damage * gameObject.transform.localScale.x : weapon.Damage;
     }
 
     public virtual void EndUsage()

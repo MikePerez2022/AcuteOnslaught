@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eba515e65fef00b4ab7c69f526a6c425, type: 3}
-  m_Name: Weapon_Break
+  m_Name: Weapon_PostBreak
   m_EditorClassIdentifier: 
-  <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 2ffe3fd820107854fb406e372295e4d8, type: 3}
+  <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 42104f90633444341bbcb9a551eeafa9, type: 3}
   <poolType>k__BackingField: 3
-  <FireRate>k__BackingField: 1
-  <SpreadAngle>k__BackingField: 0
-  <SpreadAmount>k__BackingField: 1
+  <Speed>k__BackingField: 5
+  <RandomSpeedAddition>k__BackingField: {x: -3, y: 5}
+  <Damage>k__BackingField: 2
+  <Scale>k__BackingField: 1
+  <FireRate>k__BackingField: 0
+  <SpreadAngle>k__BackingField: 45
+  <SpreadAmount>k__BackingField: 30
   <BurstAmount>k__BackingField: 0
   <BurstSpeed>k__BackingField: 0
   <AddedAngle>k__BackingField: 0
-  <RandomAngle>k__BackingField: {x: 0, y: 0}
+  <RandomAngle>k__BackingField: {x: -10, y: 10}

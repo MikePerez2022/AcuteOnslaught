@@ -30,7 +30,7 @@ public class ShootingManagerSimple : MonoBehaviour
                 {
                     spawned.transform.SetLocalPositionAndRotation(spawnPos, spawnRot);
                 }
-
+                bullet.SetStats(weapon);
                 bullet.SetInUse(gameObject);
                 currentAngle -= anglePerBullet;
             }

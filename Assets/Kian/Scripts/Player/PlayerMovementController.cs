@@ -58,6 +58,10 @@ public class PlayerMovementController : MonoBehaviour
             rb.linearVelocityX = (moveDir.x * moveSpeed) * Mathf.Clamp01((leftTouchDist - leftMinDragDist) / leftMaxDragDist);
             rb.linearVelocityY = (moveDir.y * moveSpeed) * Mathf.Clamp01((leftTouchDist - leftMinDragDist) / leftMaxDragDist);
         }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
     }
     
 }
