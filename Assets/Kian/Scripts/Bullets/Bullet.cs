@@ -64,7 +64,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Health health))
+        if (collision.gameObject.TryGetComponent(out Health health) && collision.gameObject != parent)
         {
             health.DealDamage((scaleEffectsDamage) ? damage * gameObject.transform.localScale.x : damage);
             EndUsage();
