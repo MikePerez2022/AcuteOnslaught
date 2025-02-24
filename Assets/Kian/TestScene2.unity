@@ -1350,6 +1350,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4396202301099727214, guid: 35de75fbd629e87479985808b221172a, type: 3}
     - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 989918623710247235, guid: 6a4f8775fd2ef6f43830d5368c3f0c4a, type: 3}
+    - target: {fileID: 264657235572817782, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 625036316}
@@ -1507,7 +1511,7 @@ PrefabInstance:
     - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: 'equippedGuns.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 452ca9d1856b7674da381e3117cee923, type: 2}
+      objectReference: {fileID: 11400000, guid: 1cdbbc9b2c1b34b4c80635f3977be4f1, type: 2}
     - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: 'equippedGuns.Array.data[1]'
       value: 
@@ -1600,6 +1604,10 @@ PrefabInstance:
       propertyPath: textPrefab
       value: 
       objectReference: {fileID: 4396202301099727214, guid: 35de75fbd629e87479985808b221172a, type: 3}
+    - target: {fileID: 4690056874330907179, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 989918623710247235, guid: 6a4f8775fd2ef6f43830d5368c3f0c4a, type: 3}
     - target: {fileID: 4690056874330907179, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -3514,6 +3522,10 @@ PrefabInstance:
       propertyPath: textPrefab
       value: 
       objectReference: {fileID: 4396202301099727214, guid: 35de75fbd629e87479985808b221172a, type: 3}
+    - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 989918623710247235, guid: 6a4f8775fd2ef6f43830d5368c3f0c4a, type: 3}
     - target: {fileID: 2820551562104408941, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
       propertyPath: destroyOnDeath
       value: 1
@@ -7278,6 +7290,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4396202301099727214, guid: 35de75fbd629e87479985808b221172a, type: 3}
     - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 989918623710247235, guid: 6a4f8775fd2ef6f43830d5368c3f0c4a, type: 3}
+    - target: {fileID: 5580160096377134705, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1517542092}
@@ -8595,7 +8611,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 5cf3fd5a1ea7a1b458e150eb3100bc5c, type: 2}
     - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
       propertyPath: possibleRareDrops.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
       propertyPath: 'possibleRareDrops.Array.data[0]'
@@ -8605,6 +8621,14 @@ PrefabInstance:
       propertyPath: 'possibleRareDrops.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: a94d6063bae62f44f95728487ffd4178, type: 2}
+    - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
+      propertyPath: 'possibleRareDrops.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: aba3bd943de7c9a4197e61f2433a94f8, type: 2}
+    - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
+      propertyPath: 'possibleRareDrops.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 452ca9d1856b7674da381e3117cee923, type: 2}
     - target: {fileID: 8857030122990964873, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

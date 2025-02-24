@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
 
     public GameObject textPrefab;
     public SpriteRenderer spriteRenderer;
+    public GameObject hitParticles;
 
     private void Awake()
     {
@@ -41,6 +42,12 @@ public class Health : MonoBehaviour
         if (textPrefab != null)
         {
             ShowFloatingText(amount);
+        }
+
+        if (hitParticles != null)
+        {
+            GameObject spawned = Instantiate(hitParticles, transform.position, transform.rotation);
+            spawned.GetComponent<ParticleSystem>().startColor = spriteRenderer.color;
         }
 
 
