@@ -9,6 +9,7 @@ public class AIMovement : MonoBehaviour
     public Weapon w;
     public GameObject player;
     public float speed;
+    public float maxSpeed;
 
     private float distance;
     private float time;
@@ -16,6 +17,7 @@ public class AIMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        maxSpeed = speed;
     }
     void Update()
     {
@@ -29,15 +31,17 @@ public class AIMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(Vector3.forward * angle);
 
         
-        if (distance <= 5)
+        if (distance <= 13)
         {
             Sm.Shoot(true);
-            Console.WriteLine("shooting bullets");
             speed = 0;
+            Console.WriteLine("shooting bullets");
         }
         else
         {
+            speed = maxSpeed;
             Sm.Shoot(false);
+            Console.WriteLine("moving to player");
         }
     }
         

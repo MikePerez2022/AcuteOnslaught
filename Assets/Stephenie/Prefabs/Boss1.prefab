@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 2761943125451882379}
   - component: {fileID: 610616039681730286}
   - component: {fileID: -7333672123652409670}
-  - component: {fileID: 3004248352087317977}
-  - component: {fileID: 2820551562104408941}
-  - component: {fileID: 7527422253719668033}
-  - component: {fileID: 8970653152007744151}
+  - component: {fileID: 5004566573425903979}
+  - component: {fileID: 264657235572817782}
+  - component: {fileID: -5508855618174861273}
   - component: {fileID: 4355117353282651235}
-  - component: {fileID: 1012488812981367526}
+  - component: {fileID: 7938359173022198301}
+  - component: {fileID: 2384430815211801188}
   m_Layer: 8
-  m_Name: Hexagon
+  m_Name: Boss1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,8 +33,8 @@ Transform:
   m_GameObject: {fileID: 2335061098875966246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.1973, y: 0.4933, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 6.67, y: 1.92, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,11 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceac6b3aef2f90d46a0a681d0f8ca8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sm: {fileID: 3004248352087317977}
-  w: {fileID: 11400000, guid: 9c7fd4b76902f8041b99b4d45c50b0cb, type: 2}
+  Sm: {fileID: 5004566573425903979}
+  w: {fileID: 11400000, guid: cce7ff101901834449292d45305975c9, type: 2}
   player: {fileID: 0}
-  speed: 3.5
-  maxSpeed: 0
+  speed: 4.5
 --- !u!114 &-7333672123652409670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,9 +67,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f3123b559922142a59e680653b483b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 10
-  cost: 2
---- !u!114 &3004248352087317977
+  score: 35
+  cost: 3
+--- !u!114 &5004566573425903979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,8 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equippedGuns:
-  - {fileID: 11400000, guid: 9c7fd4b76902f8041b99b4d45c50b0cb, type: 2}
---- !u!114 &2820551562104408941
+  - {fileID: 11400000, guid: 1a5f650a8faef2f41b0fdd62e87fd08c, type: 2}
+--- !u!114 &264657235572817782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,13 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28723befc957394092908e053fcfbcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <health>k__BackingField: 15
+  <health>k__BackingField: 6
   maxHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1012488812981367526}
-        m_TargetAssemblyTypeName: HealthPickupSpawner, Assembly-CSharp
+      - m_Target: {fileID: 7938359173022198301}
+        m_TargetAssemblyTypeName: WeaponPickupSpawner, Assembly-CSharp
         m_MethodName: SpawnPickup
         m_Mode: 1
         m_Arguments:
@@ -113,8 +112,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7527422253719668033}
-        m_TargetAssemblyTypeName: WeaponPickupSpawner, Assembly-CSharp
+      - m_Target: {fileID: 2384430815211801188}
+        m_TargetAssemblyTypeName: HealthPickupSpawner, Assembly-CSharp
         m_MethodName: SpawnPickup
         m_Mode: 1
         m_Arguments:
@@ -128,29 +127,8 @@ MonoBehaviour:
   destroyOnDeath: 1
   textPrefab: {fileID: 0}
   spriteRenderer: {fileID: 0}
---- !u!114 &7527422253719668033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2335061098875966246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444ded29a21048345a364b79d8d14975, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupDropChance: 0.05
-  pickupRareDropChance: 0
-  pickupObject: {fileID: 2231478859532105078, guid: fdb80c217ab3556488fb5423452014b5, type: 3}
-  possibleDrops:
-  - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
-  - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
-  - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
-  - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
-  possibleRareDrops: []
---- !u!58 &8970653152007744151
-CircleCollider2D:
+--- !u!61 &-5508855618174861273
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -183,8 +161,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.005089283, y: 0}
-  m_Radius: 0.4508071
+  m_Offset: {x: -0.0033930093, y: -0.0033923239}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.46, y: 3.02}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.76930237, y: 0.24894786}
+  m_EdgeRadius: 0
 --- !u!212 &4355117353282651235
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -229,8 +217,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5613083596066992998, guid: d10679562bd8475499cea1b8804446e8, type: 3}
-  m_Color: {r: 0.3960784, g: 0.80569845, b: 0.9882353, a: 1}
+  m_Sprite: {fileID: -3469853343841011222, guid: 010f21313f8e4244eace7cba12fc66d2, type: 3}
+  m_Color: {r: 0.9882353, g: 0.3960784, b: 0.8840416, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -240,7 +228,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1012488812981367526
+--- !u!114 &7938359173022198301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335061098875966246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444ded29a21048345a364b79d8d14975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupDropChance: 0.05
+  pickupRareDropChance: 0
+  pickupObject: {fileID: 2231478859532105078, guid: fdb80c217ab3556488fb5423452014b5, type: 3}
+  possibleDrops:
+  - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
+  - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
+  - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
+  - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
+  possibleRareDrops: []
+--- !u!114 &2384430815211801188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

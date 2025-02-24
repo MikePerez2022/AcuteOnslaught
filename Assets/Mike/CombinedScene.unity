@@ -1414,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4690056874330907179, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+      propertyPath: maxHealth
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 6028385062525095356, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1477,7 +1481,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2110,8 +2114,9 @@ MonoBehaviour:
   enemyTypes:
   - {fileID: 2335061098875966246, guid: 25c0627401739054eb7f2d1b15eca020, type: 3}
   - {fileID: 2335061098875966246, guid: cfe15f4fb0687504fa72a45382dacbf7, type: 3}
-  bossTypes:
   - {fileID: 2335061098875966246, guid: 1ae223dd1b2d8be42876a57a262ad449, type: 3}
+  bossTypes:
+  - {fileID: 2335061098875966246, guid: 20e53281f4244144b902bf033e8e4d72, type: 3}
   spawnpoints:
   - {fileID: 171093661}
   - {fileID: 879427564}
@@ -3009,10 +3014,15 @@ MonoBehaviour:
   StartScreen: {fileID: 460916020}
   GameScreen: {fileID: 1261829394}
   DeathScreen: {fileID: 1226858892}
+  PauseScreen: {fileID: 0}
   SettingsScreen: {fileID: 1192250188}
   Player: {fileID: 192962339}
+  A_Music: {fileID: 0}
+  M_Music: {fileID: 0}
+  D_Music: {fileID: 0}
   Spawner: {fileID: 743885945}
   test: 0
+  AudioList: []
 --- !u!1 &1038542642
 GameObject:
   m_ObjectHideFlags: 0
