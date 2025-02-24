@@ -88,7 +88,7 @@ MonoBehaviour:
     m_Bits: 4096
   hitMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
 --- !u!120 &5766049378293064789
 LineRenderer:
   serializedVersion: 2

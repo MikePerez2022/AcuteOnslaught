@@ -5,7 +5,6 @@ public class LaserBullet : Bullet
     [SerializeField] LineRenderer lr;
 
     private bool disappear;
-    [SerializeField] private float laserWidth;
     [SerializeField] private float shrinkSpeed;
     [SerializeField] private float lerpSpeed;
 
@@ -17,7 +16,6 @@ public class LaserBullet : Bullet
     {
         base.SetInUse(parentObject);
 
-        lr.widthMultiplier = laserWidth;
         lr.SetPosition(0, transform.position);
         lr.SetPosition(1, transform.position);
         disappear = true;
@@ -33,12 +31,21 @@ public class LaserBullet : Bullet
             {
                 if (hit.collider.TryGetComponent(out Health health))
                 {
-                    health.DealDamage(damage);
+                    float actualDamage = (scaleEffectsDamage) ? damage * lr.widthMultiplier : damage;
+                    health.DealDamage(actualDamage);
                 };
             }
         }
 
         
+    }
+
+    public override void SetStats(Weapon weapon)
+    {
+        base.SetStats(weapon);
+
+        lr.widthMultiplier = weapon.Scale;
+
     }
 
     private void Update()

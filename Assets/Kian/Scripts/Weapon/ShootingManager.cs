@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingManager : MonoBehaviour
 {
-    [SerializeField] private PoolManager pm;
+    private PoolManager pm;
 
     [SerializeField] private List<Weapon> equippedGuns = new();
 
@@ -19,6 +19,8 @@ public class ShootingManager : MonoBehaviour
         {
             firingGuns.Add(false);
         }
+
+        pm = PoolManager.instance;
     }
 
     public void Shoot(bool shoot)
@@ -42,6 +44,8 @@ public class ShootingManager : MonoBehaviour
         float anglePerBullet = 0;
         firingGuns[index] = true;
 
+        yield return new WaitForSeconds(Random.Range(.01f, .05f));
+
         if (weapon.SpreadAmount > 1)
         {
             anglePerBullet = weapon.SpreadAngle / (weapon.SpreadAmount - 1);
@@ -64,7 +68,7 @@ public class ShootingManager : MonoBehaviour
                 {
                     spawned.transform.SetLocalPositionAndRotation(spawnPos, spawnRot);
                 }
-
+                bullet.SetStats(weapon);
                 bullet.SetInUse(gameObject);
                 currentAngle -= anglePerBullet;
             }
@@ -79,7 +83,7 @@ public class ShootingManager : MonoBehaviour
 
         }
         
-        yield return new WaitForSeconds(weapon.FireRate + Random.Range(.01f, .05f));
+        yield return new WaitForSeconds(weapon.FireRate);
 
         if (shooting)
         {
@@ -98,6 +102,7 @@ public class ShootingManager : MonoBehaviour
         equippedGuns.Add(weapon);
         firingGuns.Add(false);
 
-        Shoot(shooting);
+        if (shooting)
+            Shoot(shooting);
     }
 }

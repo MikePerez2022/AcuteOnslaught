@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 2761943125451882379}
   - component: {fileID: 610616039681730286}
   - component: {fileID: -7333672123652409670}
-  - component: {fileID: 8494058005321099890}
   - component: {fileID: 3004248352087317977}
   - component: {fileID: 2820551562104408941}
+  - component: {fileID: 7527422253719668033}
   - component: {fileID: 8970653152007744151}
   - component: {fileID: 4355117353282651235}
+  - component: {fileID: 1012488812981367526}
   m_Layer: 8
   m_Name: Hexagon
   m_TagString: Untagged
@@ -68,18 +69,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   cost: 2
---- !u!114 &8494058005321099890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2335061098875966246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb1a66068a305ab499a8f355635b9ffb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3004248352087317977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +81,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8df523c224a7534d9098a5ee98ab9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pm: {fileID: 8494058005321099890}
   equippedGuns:
   - {fileID: 11400000, guid: 9c7fd4b76902f8041b99b4d45c50b0cb, type: 2}
 --- !u!114 &2820551562104408941
@@ -108,6 +96,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <health>k__BackingField: 15
+  maxHealth: 0
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1012488812981367526}
+        m_TargetAssemblyTypeName: HealthPickupSpawner, Assembly-CSharp
+        m_MethodName: SpawnPickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7527422253719668033}
+        m_TargetAssemblyTypeName: WeaponPickupSpawner, Assembly-CSharp
+        m_MethodName: SpawnPickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyOnDeath: 1
+--- !u!114 &7527422253719668033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335061098875966246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444ded29a21048345a364b79d8d14975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupDropChance: 0.05
+  pickupObject: {fileID: 2231478859532105078, guid: fdb80c217ab3556488fb5423452014b5, type: 3}
+  possibleDrops:
+  - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
+  - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
+  - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
+  - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
 --- !u!58 &8970653152007744151
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -199,3 +235,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1012488812981367526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335061098875966246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2feb5b8b8af2c4f418b4dc32ab476215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupDropChance: 0.1
+  pickupObject: {fileID: 9171991882067708731, guid: 4d0bbf22e83d1264a8ad709bb3e0007a, type: 3}

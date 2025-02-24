@@ -15,7 +15,7 @@ public class AIMovement : MonoBehaviour
 
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {
@@ -29,10 +29,11 @@ public class AIMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(Vector3.forward * angle);
 
         
-        if (distance <= 50)
+        if (distance <= 5)
         {
             Sm.Shoot(true);
             Console.WriteLine("shooting bullets");
+            speed = 0;
         }
         else
         {
