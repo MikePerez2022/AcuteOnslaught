@@ -15,9 +15,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected float speed;
     protected GameObject parent;
 
-    private bool scaleEffectsDamage;
-    private bool scalesOverTime;
-    private float scaleChangeOverTime;
+    protected bool scaleEffectsDamage;
+    protected bool scalesOverTime;
+    protected float scaleChangeOverTime;
 
     private void Update()
     {

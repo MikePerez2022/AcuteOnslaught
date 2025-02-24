@@ -1507,7 +1507,7 @@ PrefabInstance:
     - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: 'equippedGuns.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4ae20b8c4dd43814c9b1743dafe5589c, type: 2}
+      objectReference: {fileID: 11400000, guid: 452ca9d1856b7674da381e3117cee923, type: 2}
     - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: 'equippedGuns.Array.data[1]'
       value: 
@@ -1536,6 +1536,22 @@ PrefabInstance:
       propertyPath: 'equippedGuns.Array.data[7]'
       value: 
       objectReference: {fileID: 11400000, guid: cee5b2434937b794688a6f8bcf8c2c42, type: 2}
+    - target: {fileID: 4456703991186871513, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456703991186871513, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.402985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456703991186871513, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4925373
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456703991186871513, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4689437528910347260, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -31,7 +31,8 @@ public class LaserBullet : Bullet
             {
                 if (hit.collider.TryGetComponent(out Health health))
                 {
-                    health.DealDamage(damage);
+                    float actualDamage = (scaleEffectsDamage) ? damage * lr.widthMultiplier : damage;
+                    health.DealDamage(actualDamage);
                 };
             }
         }
