@@ -1,4 +1,6 @@
 using Unity.VisualScripting;
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
@@ -12,14 +14,16 @@ public class NavUI : MonoBehaviour
     [SerializeField] GameObject GameScreen;
     [SerializeField] GameObject DeathScreen;
     [SerializeField] GameObject PauseScreen;
+    [SerializeField] TMP_Text Highscore;
     [SerializeField] GameObject SettingsScreen;
+    [SerializeField] ScoreManager EnemySystems;
 
     [Header("Game:")]
     [SerializeField] GameObject Player;
     [SerializeField] GameObject A_Music;
     [SerializeField] GameObject M_Music;
     [SerializeField] GameObject D_Music;
-    [SerializeField] GameObject Spawner;
+    [SerializeField] WaveSystem Spawner;
     [SerializeField] bool test;
 
     [Header("Audio:")]
@@ -28,11 +32,21 @@ public class NavUI : MonoBehaviour
     private bool isPaused = false;
     private bool isDead = false;
 
+    void Start()
+    {
+        if (PlayerPrefs.HasKey("HighestScore"))
+        {
+            Highscore.text = "Highscore: " + PlayerPrefs.GetFloat("HighestScore").ToString();
+        }
+    }
+
 
     void Update()
     {
         if (Player.IsDestroyed() && !isDead)
         {
+            EnemySystems.UpdateHighScore();
+            Spawner.enabled = false;
             DeathScreen.SetActive(true);
             A_Music.SetActive(false);
             D_Music.SetActive(true);
@@ -47,7 +61,7 @@ public class NavUI : MonoBehaviour
         StartScreen.SetActive(false);
         GameScreen.SetActive(true);
         Player.SetActive(true);
-        Spawner.SetActive(true);
+        Spawner.enabled = true;
         A_Music.SetActive(true);
         M_Music.SetActive(false);
         PlaySound(0);
@@ -80,6 +94,7 @@ public class NavUI : MonoBehaviour
     public void OnPauseBtnPressed()
     {
         isPaused = !isPaused;
+        Spawner.enabled = !isPaused;
         Time.timeScale = (isPaused) ? 0.0f : 1.0f;
         PauseScreen.SetActive(isPaused);
 

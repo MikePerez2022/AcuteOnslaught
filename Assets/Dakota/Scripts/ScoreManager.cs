@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
     public void ChangeScore(int points)
     {
         currentScore += (int)(points * multiplier); // Truncates after calculating score
-        currentScoreText.text = currentScore.ToString();
+        currentScoreText.text = "Score: " + currentScore.ToString();
     }
 
     // Call at end of the game
@@ -46,6 +46,6 @@ public class ScoreManager : MonoBehaviour
         }
 
         finalScoreText.text = currentScore.ToString();
-        highestScoreText.text = PlayerPrefs.GetFloat("HighestScore").ToString();
+        highestScoreText.text = "Highscore: " + PlayerPrefs.GetFloat("HighestScore").ToString();
     }
 }
