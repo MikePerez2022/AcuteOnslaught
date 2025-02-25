@@ -24,6 +24,7 @@ public class NavUI : MonoBehaviour
     [SerializeField] GameObject M_Music;
     [SerializeField] GameObject D_Music;
     [SerializeField] WaveSystem Spawner;
+    [SerializeField] Slider HealthSlider;
     [SerializeField] bool test;
 
     [Header("Audio:")]
@@ -52,6 +53,11 @@ public class NavUI : MonoBehaviour
             D_Music.SetActive(true);
             PlaySound(2);
             isDead = true;
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            HealthSlider.value = Player.GetComponent<Health>().health / (float)100;
         }
         if (test) DeathScreen.SetActive(true);
     }
@@ -65,6 +71,7 @@ public class NavUI : MonoBehaviour
         A_Music.SetActive(true);
         M_Music.SetActive(false);
         PlaySound(0);
+        Time.timeScale = 1.0f;
     }
 
     public void OnSettingsBtnPressed()

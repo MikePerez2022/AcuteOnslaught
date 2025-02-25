@@ -45,7 +45,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetFloat("HighestScore", currentScore);
         }
 
-        finalScoreText.text = currentScore.ToString();
+        finalScoreText.text = "Score: " + currentScore.ToString();
         highestScoreText.text = "Highscore: " + PlayerPrefs.GetFloat("HighestScore").ToString();
     }
 }
