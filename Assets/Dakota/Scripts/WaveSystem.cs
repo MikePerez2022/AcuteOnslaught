@@ -59,7 +59,8 @@ public class WaveSystem : MonoBehaviour
         if (timeAlive % 60 == 0)
         {
             // Increase score every minute (Adjustable), increased bonus points based on time
-            // ScoreManager.ChangeScore(100, (int)(timeAlive / 60)); 
+            ScoreManager.instance.ChangeScore(100); 
+            ScoreManager.instance.multiplier += 0.1f;
         }
     }
     void SelectWaveEnemies()
