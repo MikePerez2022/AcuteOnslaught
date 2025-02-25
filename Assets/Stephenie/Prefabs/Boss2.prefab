@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equippedGuns:
   - {fileID: 11400000, guid: 1a5f650a8faef2f41b0fdd62e87fd08c, type: 2}
+  - {fileID: 11400000, guid: 61e181be9d530e44e9cf6fb2978c1e09, type: 2}
 --- !u!114 &264657235572817782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <health>k__BackingField: 6
-  maxHealth: 0
+  maxHealth: 35
   deathEvent:
     m_PersistentCalls:
       m_Calls:

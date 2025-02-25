@@ -30,8 +30,16 @@ public class AIMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(this.transform.position,player.transform.position, speed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(Vector3.forward * angle);
 
-        
-        if (distance <= 13)
+        if(distance <= 30)
+        {
+            speed = maxSpeed / 2;
+        }
+        if(distance <= 20)
+        {
+            Sm.Shoot(true);
+            speed = maxSpeed / 3;
+        }
+        if (distance <= 10)
         {
             Sm.Shoot(true);
             speed = 0;

@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba515e65fef00b4ab7c69f526a6c425, type: 3}
   m_Name: EnemyWeapon_PostBreak
   m_EditorClassIdentifier: 
-  <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 364af342f9e98c54e9d4abd82c37193e, type: 3}
+  <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 1799e34518692494484ba7a62eb5f0e5, type: 3}
   <poolType>k__BackingField: 4
-  <FireRate>k__BackingField: 0
+  <Speed>k__BackingField: 15
+  <RandomSpeedAddition>k__BackingField: {x: 0, y: 0}
+  <Damage>k__BackingField: 3
+  <Scale>k__BackingField: 2
+  <ScalesOverTime>k__BackingField: 0
+  <ScaleChangeOverTime>k__BackingField: 0
+  <RandomScaleAddition>k__BackingField: {x: 0, y: 0}
+  <ScaleEffectsDamage>k__BackingField: 0
+  <FireRate>k__BackingField: 3
   <SpreadAngle>k__BackingField: 45
   <SpreadAmount>k__BackingField: 3
   <BurstAmount>k__BackingField: 0
   <BurstSpeed>k__BackingField: 0
-  <AddedAngle>k__BackingField: 0
+  <AddedAngle>k__BackingField: -100
   <RandomAngle>k__BackingField: {x: 0, y: 0}

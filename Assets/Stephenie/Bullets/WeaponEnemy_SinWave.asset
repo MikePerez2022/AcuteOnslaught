@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Bullet>k__BackingField: {fileID: 2813987022148941884, guid: 6653920415408c64b822df2f4a6703fb, type: 3}
   <poolType>k__BackingField: 1
-  <Speed>k__BackingField: 0
+  <Speed>k__BackingField: 25
   <RandomSpeedAddition>k__BackingField: {x: 0, y: 0}
-  <Damage>k__BackingField: 0
+  <Damage>k__BackingField: 1
   <Scale>k__BackingField: 0
   <ScalesOverTime>k__BackingField: 0
   <ScaleChangeOverTime>k__BackingField: 0
