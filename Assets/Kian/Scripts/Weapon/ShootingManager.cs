@@ -45,7 +45,7 @@ public class ShootingManager : MonoBehaviour
         firingGuns[index] = true;
 
         yield return new WaitForSeconds(Random.Range(.01f, .05f));
-        AudioPlayer.PlaySound(index+1);
+        AudioPlayer.PlaySound((index > 8) ? Random.Range(1,8) : index + 1);
 
         if (weapon.SpreadAmount > 1)
         {
