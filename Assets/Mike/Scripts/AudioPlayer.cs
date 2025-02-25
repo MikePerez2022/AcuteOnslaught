@@ -10,7 +10,8 @@ public enum SoundTypes{
     GUN5,
     GUN6,
     GUN7,
-    GUN8
+    GUN8,
+    PLAYER_DEATH
 }
 
 [RequireComponent(typeof(AudioSource))]
