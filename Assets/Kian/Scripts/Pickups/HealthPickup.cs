@@ -11,6 +11,7 @@ public class HealthPickup : Pickup
             if (collision.gameObject.TryGetComponent(out Health health))
             {
                 health.GainHealth(healthToGive);
+                AudioPlayer.PlaySound(SoundTypes.PICKUP);
                 Destroy(gameObject);
             }
 
