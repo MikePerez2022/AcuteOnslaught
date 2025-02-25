@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: -7333672123652409670}
   - component: {fileID: 5004566573425903979}
   - component: {fileID: 264657235572817782}
-  - component: {fileID: -5508855618174861273}
-  - component: {fileID: 7938359173022198301}
-  - component: {fileID: 2384430815211801188}
+  - component: {fileID: 126433386352681719}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Untagged
@@ -33,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.5792, y: 1.5563, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8759673538823104293}
@@ -97,39 +95,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <health>k__BackingField: 6
-  maxHealth: 0
+  maxHealth: 6
   deathEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7938359173022198301}
-        m_TargetAssemblyTypeName: WeaponPickupSpawner, Assembly-CSharp
-        m_MethodName: SpawnPickup
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2384430815211801188}
-        m_TargetAssemblyTypeName: HealthPickupSpawner, Assembly-CSharp
-        m_MethodName: SpawnPickup
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   destroyOnDeath: 1
-  textPrefab: {fileID: 0}
+  textPrefab: {fileID: 4396202301099727214, guid: 35de75fbd629e87479985808b221172a, type: 3}
   spriteRenderer: {fileID: 0}
---- !u!61 &-5508855618174861273
-BoxCollider2D:
+  hitParticles: {fileID: 989918623710247235, guid: 6a4f8775fd2ef6f43830d5368c3f0c4a, type: 3}
+--- !u!58 &126433386352681719
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -158,60 +133,12 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0033930093, y: -0.0033923239}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.91, y: 13.54}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.76930237, y: 0.24894786}
-  m_EdgeRadius: 0
---- !u!114 &7938359173022198301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2335061098875966246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444ded29a21048345a364b79d8d14975, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupDropChance: 0.05
-  pickupRareDropChance: 0
-  pickupObject: {fileID: 2231478859532105078, guid: fdb80c217ab3556488fb5423452014b5, type: 3}
-  possibleDrops:
-  - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
-  - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
-  - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
-  - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
-  possibleRareDrops: []
---- !u!114 &2384430815211801188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2335061098875966246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2feb5b8b8af2c4f418b4dc32ab476215, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupDropChance: 0.1
-  pickupRareDropChance: 0
-  pickupObject: {fileID: 9171991882067708731, guid: 4d0bbf22e83d1264a8ad709bb3e0007a, type: 3}
-  basicHealthAmount: 0
-  rareHealthAmount: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.8
 --- !u!1 &7306254891395049503
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,9 +165,9 @@ Transform:
   m_GameObject: {fileID: 7306254891395049503}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.17, y: 0.24, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2761943125451882379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
