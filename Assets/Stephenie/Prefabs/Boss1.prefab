@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.67, y: 1.92, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,6 +55,7 @@ MonoBehaviour:
   w: {fileID: 11400000, guid: cce7ff101901834449292d45305975c9, type: 2}
   player: {fileID: 0}
   speed: 4.5
+  maxSpeed: 0
 --- !u!114 &-7333672123652409670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +128,7 @@ MonoBehaviour:
   destroyOnDeath: 1
   textPrefab: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  hitParticles: {fileID: 0}
 --- !u!61 &-5508855618174861273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -249,6 +251,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
   - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
   possibleRareDrops: []
+  basicColor: {r: 0, g: 0, b: 0, a: 0}
+  rareColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2384430815211801188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,3 +270,5 @@ MonoBehaviour:
   pickupObject: {fileID: 9171991882067708731, guid: 4d0bbf22e83d1264a8ad709bb3e0007a, type: 3}
   basicHealthAmount: 0
   rareHealthAmount: 0
+  basicColor: {r: 0, g: 0, b: 0, a: 0}
+  rareColor: {r: 0, g: 0, b: 0, a: 0}

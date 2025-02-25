@@ -22,7 +22,7 @@ MonoBehaviour:
   <ScaleChangeOverTime>k__BackingField: 0
   <RandomScaleAddition>k__BackingField: {x: 0, y: 0}
   <ScaleEffectsDamage>k__BackingField: 0
-  <FireRate>k__BackingField: 0.05
+  <FireRate>k__BackingField: 0.2
   <SpreadAngle>k__BackingField: 0
   <SpreadAmount>k__BackingField: 1
   <BurstAmount>k__BackingField: 0

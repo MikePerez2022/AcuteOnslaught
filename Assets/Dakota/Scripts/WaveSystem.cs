@@ -49,17 +49,17 @@ public class WaveSystem : MonoBehaviour
         }
 
         // Spawn boss and increment wave difficulty
-        if (bossTimer >= 40)
+        if (bossTimer >= 30)
         {
             // Fully random, better structure can be implemented once we have more details on wave progression
             Instantiate(bossTypes[Random.Range(0, bossTypes.Count)], spawnpoints[Random.Range(0, spawnpoints.Count)].position, Quaternion.identity);
             bossTimer = 0;
         }
 
-        if (timeAlive % 60 == 0)
+        if (timeAlive % 30 == 0)
         {
             // Increase score every minute (Adjustable), increased bonus points based on time
-            ScoreManager.instance.ChangeScore(100); 
+            ScoreManager.instance.ChangeScore(1000); 
             ScoreManager.instance.multiplier += 0.1f;
         }
     }
