@@ -2304,7 +2304,8 @@ MonoBehaviour:
   - {fileID: 1517542085}
   - {fileID: 170992066}
   - {fileID: 625036312}
-  bossTypes: []
+  bossTypes:
+  - {fileID: 625036312}
   spawnpoints:
   - {fileID: 171093661}
   - {fileID: 879427564}
