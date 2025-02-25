@@ -8200,12 +8200,20 @@ PrefabInstance:
       value: PickupManagers
       objectReference: {fileID: 0}
     - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
+      propertyPath: rareColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
       propertyPath: rareColor.b
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
       propertyPath: rareColor.r
       value: 0.38431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
+      propertyPath: basicColor.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
       propertyPath: basicColor.b
@@ -8445,8 +8453,8 @@ MonoBehaviour:
   pickupObject: {fileID: 9171991882067708731, guid: 4d0bbf22e83d1264a8ad709bb3e0007a, type: 3}
   basicHealthAmount: 25
   rareHealthAmount: 50
-  basicColor: {r: 0.4117647, g: 0.8117647, b: 0.003921569, a: 0}
-  rareColor: {r: 0, g: 0.81960785, b: 0.18039216, a: 0}
+  basicColor: {r: 0.4117647, g: 0.8117647, b: 0.003921569, a: 1}
+  rareColor: {r: 0, g: 0.81960785, b: 0.18039216, a: 1}
 --- !u!1001 &1614334080
 PrefabInstance:
   m_ObjectHideFlags: 0
