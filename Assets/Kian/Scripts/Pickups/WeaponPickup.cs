@@ -11,6 +11,7 @@ public class WeaponPickup : Pickup
             if (collision.gameObject.TryGetComponent(out ShootingManager sm))
             {
                 sm.AddGun(weaponToGive);
+                AudioPlayer.PlaySound(SoundTypes.PICKUP);
                 Destroy(gameObject);
             }
 

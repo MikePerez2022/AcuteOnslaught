@@ -29,7 +29,7 @@ public class ShootingManager : MonoBehaviour
 
         if (shooting)
         {
-            for (int i = 0; i < equippedGuns.Count; i++) 
+            for (int i = 0; i < equippedGuns.Count; i++)
             {
                 if (!firingGuns[i])
                     StartCoroutine(SpawnBullet(equippedGuns[i], i));
@@ -45,6 +45,7 @@ public class ShootingManager : MonoBehaviour
         firingGuns[index] = true;
 
         yield return new WaitForSeconds(Random.Range(.01f, .05f));
+        AudioPlayer.PlaySound(index+1);
 
         if (weapon.SpreadAmount > 1)
         {
