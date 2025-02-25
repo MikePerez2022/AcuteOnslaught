@@ -113,8 +113,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.98742133, g: 0.3943474, b: 0.3943474, a: 1}
+  m_Sprite: {fileID: 5565007450394435829, guid: ac79bb2949d4540438b5ea700f27e51c, type: 3}
+  m_Color: {r: 0.9811321, g: 0.79292744, b: 0.79292744, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   destroyOnDeath: 1
+  textPrefab: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &302607274656566120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,12 +181,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupDropChance: 0.05
+  pickupRareDropChance: 0
   pickupObject: {fileID: 2231478859532105078, guid: fdb80c217ab3556488fb5423452014b5, type: 3}
   possibleDrops:
   - {fileID: 11400000, guid: 3bf88982ccc15b64cba31ae367b906fe, type: 2}
   - {fileID: 11400000, guid: 8940756b4c738fc4389a24f66ae03419, type: 2}
   - {fileID: 11400000, guid: fd1086100e6abe84db28a65a7b9aa6c2, type: 2}
   - {fileID: 11400000, guid: 957277a184450dd4db793d4d0e8a85d3, type: 2}
+  possibleRareDrops: []
 --- !u!61 &2454648359356874362
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -223,7 +227,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.44, y: 2.39}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -258,4 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupDropChance: 0.1
+  pickupRareDropChance: 0
   pickupObject: {fileID: 9171991882067708731, guid: 4d0bbf22e83d1264a8ad709bb3e0007a, type: 3}
+  basicHealthAmount: 0
+  rareHealthAmount: 0
