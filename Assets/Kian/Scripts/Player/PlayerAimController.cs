@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAimController : MonoBehaviour
 {
@@ -8,9 +9,11 @@ public class PlayerAimController : MonoBehaviour
 
     private Vector2 rightTouchStartPos;
     [SerializeField] private float rightMinTouchDist;
+    [SerializeField] private float rightMaxTouchDist;
     private bool shooting;
 
     [SerializeField] private ShootingManager sm;
+    [SerializeField] private Image rightJoystick;
 
     private void Start()
     {
@@ -28,6 +31,8 @@ public class PlayerAimController : MonoBehaviour
                 {
                     touchIndex = index;
                     rightTouchStartPos = touch.position;
+                    rightJoystick.gameObject.SetActive(true);
+                    rightJoystick.transform.position = touch.position;
                 }
                 else if (touch.phase == TouchPhase.Moved && index == touchIndex)
                 {
@@ -39,11 +44,22 @@ public class PlayerAimController : MonoBehaviour
                     float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
 
                     transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+
+                    if (Vector2.Distance(rightJoystick.transform.position, rightTouchStartPos) >= rightMaxTouchDist * .95f)
+                    {
+                        rightJoystick.transform.position = rightTouchStartPos + ((touch.position - rightTouchStartPos).normalized * rightMaxTouchDist);
+                    }
+                    else
+                    {
+                        rightJoystick.transform.position = touch.position;
+                    }
                 }
                 else if (touch.phase == TouchPhase.Ended && index == touchIndex)
                 {
                     sm.Shoot(false);
                     touchIndex = -1;
+
+                    rightJoystick.gameObject.SetActive(false);
                 }
             }
             index++;

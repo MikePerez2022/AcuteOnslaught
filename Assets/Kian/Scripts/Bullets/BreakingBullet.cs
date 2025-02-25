@@ -15,6 +15,7 @@ public class BreakingBullet : Bullet
         base.SetInUse(parentObject);
 
         StartCoroutine(BreakBullet());
+
     }
 
     private IEnumerator BreakBullet()
