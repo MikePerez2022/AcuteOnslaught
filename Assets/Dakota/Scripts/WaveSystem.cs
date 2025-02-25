@@ -65,7 +65,7 @@ public class WaveSystem : MonoBehaviour
     void SelectWaveEnemies()
     {
         // Adjust logic to select enemies based on wave difficulty to what we want
-        float waveDifficulty = (timeAlive <= 30) ? 1 : timeAlive / 30;
+        float waveDifficulty = (timeAlive <= 60) ? 1 : timeAlive / 60;
         int waveCost = (int)(waveDifficulty * 10);
         while (waveCost > 0)
         {
