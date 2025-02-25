@@ -1504,58 +1504,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: equippedGuns.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: 'equippedGuns.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 01929325c5507b2488938d5fd7fd634d, type: 2}
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: 'equippedGuns.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 01929325c5507b2488938d5fd7fd634d, type: 2}
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: 'equippedGuns.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 1cdbbc9b2c1b34b4c80635f3977be4f1, type: 2}
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: 'equippedGuns.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 038eb6421f3acf54393715e38061f01d, type: 2}
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: 'equippedGuns.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 76a79250a8cd08541a48ec29fa6fe596, type: 2}
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: 'equippedGuns.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 467cc6ebcd4016c4198ab2becfc80541, type: 2}
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: 'equippedGuns.Array.data[6]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 24a05add61f871544b25351d4a86edc1, type: 2}
-    - target: {fileID: 1184065736464919844, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: 'equippedGuns.Array.data[7]'
-      value: 
-      objectReference: {fileID: 11400000, guid: cee5b2434937b794688a6f8bcf8c2c42, type: 2}
-    - target: {fileID: 4456703991186871513, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4456703991186871513, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.402985
-      objectReference: {fileID: 0}
-    - target: {fileID: 4456703991186871513, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4925373
-      objectReference: {fileID: 0}
-    - target: {fileID: 4456703991186871513, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4689437528910347260, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1596,77 +1544,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4690056874330907179, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4690056874330907179, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: textPrefab
-      value: 
-      objectReference: {fileID: 4396202301099727214, guid: 35de75fbd629e87479985808b221172a, type: 3}
-    - target: {fileID: 4690056874330907179, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: hitParticles
-      value: 
-      objectReference: {fileID: 989918623710247235, guid: 6a4f8775fd2ef6f43830d5368c3f0c4a, type: 3}
-    - target: {fileID: 4690056874330907179, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: spriteRenderer
-      value: 
-      objectReference: {fileID: 732540928}
     - target: {fileID: 5463916608823080462, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: leftJoystick
       value: 
       objectReference: {fileID: 1943753790}
-    - target: {fileID: 5463916608823080462, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: leftMinDragDist
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 6028385062525095356, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028385062525095356, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233471537999586896, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_Color.b
-      value: 0.17675321
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233471537999586896, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233471537999586896, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_Color.r
-      value: 0.1273585
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683276318007603675, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_Color.b
-      value: 0.92411816
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683276318007603675, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683276318007603675, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4764151
       objectReference: {fileID: 0}
     - target: {fileID: 8821957188359701183, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
       propertyPath: rightJoystick
       value: 
       objectReference: {fileID: 1292832812}
-    - target: {fileID: 8821957188359701183, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: rightMaxTouchDist
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8821957188359701183, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-      propertyPath: rightMinTouchDist
-      value: 40
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2373799087865248817, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
@@ -2347,11 +2238,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7787082833241216319, guid: b1d62dd2101aa6f468daa971ea16f0c2, type: 3}
   m_PrefabInstance: {fileID: 731688877}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &732540928 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8233471537999586896, guid: 8b8f47cdc942eeb4b9aeefcc5dcd2406, type: 3}
-  m_PrefabInstance: {fileID: 517724200}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &743885945
 GameObject:
@@ -8636,6 +8522,22 @@ PrefabInstance:
       value: PickupManagers
       objectReference: {fileID: 0}
     - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
+      propertyPath: rareColor.b
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
+      propertyPath: rareColor.r
+      value: 0.38431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
+      propertyPath: basicColor.b
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
+      propertyPath: basicColor.g
+      value: 0.57254905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149235647139345853, guid: 9fb931e71eb88d84fabd9cd7de0ac0e4, type: 3}
       propertyPath: pickupDropChance
       value: 0.025
       objectReference: {fileID: 0}
@@ -8865,6 +8767,8 @@ MonoBehaviour:
   pickupObject: {fileID: 9171991882067708731, guid: 4d0bbf22e83d1264a8ad709bb3e0007a, type: 3}
   basicHealthAmount: 25
   rareHealthAmount: 50
+  basicColor: {r: 0.4117647, g: 0.8117647, b: 0.003921569, a: 0}
+  rareColor: {r: 0, g: 0.81960785, b: 0.18039216, a: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -21,17 +21,18 @@ public class AudioPlayer : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+            instance = this;
         
     }
 
     public static void PlaySound(SoundTypes sound)
     {
-        instance.soundList[(int)sound].Play();
+        //instance.soundList[(int)sound].Play();
     }
 
     public static void PlaySound(int sound)
     {
-        instance.soundList[sound].Play();
+        //instance.soundList[sound].Play();
     }
 }

@@ -7,6 +7,8 @@ public class WeaponPickupSpawner : PickupSpawner
     [SerializeField] private List<Weapon> possibleDrops = new();
     [SerializeField] private List<Weapon> possibleRareDrops = new();
 
+    [SerializeField] private Color basicColor;
+    [SerializeField] private Color rareColor;
     private void Awake()
     {
         if (instance == null)
@@ -29,10 +31,12 @@ public class WeaponPickupSpawner : PickupSpawner
             if (rareCheck <= pickupRareDropChance)
             {
                 wp.weaponToGive = possibleRareDrops[Random.Range(0, possibleRareDrops.Count)];
+                spawned.GetComponentInChildren<SpriteRenderer>().color = rareColor;
             }
             else
             {
                 wp.weaponToGive = possibleDrops[Random.Range(0, possibleDrops.Count)];
+                spawned.GetComponentInChildren<SpriteRenderer>().color = basicColor;
             }
             //Instantiate(possibleDrops[Random.Range(0, possibleDrops.Count - 1)]);
         }

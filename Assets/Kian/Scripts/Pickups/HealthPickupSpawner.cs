@@ -8,6 +8,9 @@ public class HealthPickupSpawner : PickupSpawner
     [SerializeField] private float basicHealthAmount;
     [SerializeField] private float rareHealthAmount;
 
+    [SerializeField] private Color basicColor;
+    [SerializeField] private Color rareColor;
+
     private void Awake()
     {
         if (instance == null)
@@ -31,10 +34,12 @@ public class HealthPickupSpawner : PickupSpawner
             if (rareCheck <= pickupRareDropChance)
             {
                 hp.healthToGive = rareHealthAmount;
+                spawned.GetComponentInChildren<SpriteRenderer>().color = rareColor;
             }
             else
             {
                 hp.healthToGive = basicHealthAmount;
+                spawned.GetComponentInChildren<SpriteRenderer>().color = basicColor;
             }
         }
     }
